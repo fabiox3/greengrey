@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+	<div class="row">
+		<div class="col-lg-12">
+			{% if username != null %}
+			Ciao, {{ username }}! Cosa vuoi fare oggi?
+			{% endif %}
+
+			{% if username == null %}
+			<a href="/login" class="btn btn-info">Accedi</a>	
+			{% endif %}
+			
+		</div>	
+	</div> 
+{% endblock %}

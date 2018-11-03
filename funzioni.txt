@@ -1,0 +1,30 @@
+LE FUNZIONI DI OLIVO.NET®
+
+A) Meteo
+Registrazione delle principali variabili metereologiche, con sistema automatico di controllo di qualità dei dati;
+Previsione meteo riferita alle singole stazioni meteorologiche;
+Accesso ai dati meteo in tempo reale e ai dati storici.
+
+B) Dss
+Modelli fenologici della coltura (scala BBCH) e di maturazione delle drupe (polifenoli e inoliazione);
+Modelli previsionali delle malattie occhio di pavone (Spilocaea oleaginea);
+Indicatore della quantità di rame ancora disponibile per i trattamenti alla data della consultazione;
+Modelli previsionali integrati per la mosca (Bactrocera oleae);
+Modello per il bilancio idrico a supporto dell’irrigazione;
+Modello per il bilancio nutrizionale a supporto della concimazione (N, P, K, Ca, Mg).
+
+C) Registro delle operazioni colturali (Roc)
+Funzione quaderno di campagna;
+Funzione di verifica e controllo dei dati inseriti, per chi aderisce al disciplinare di produzione integrata volontaria;
+Funzione di stampa e esportazione delle informazioni registrate.
+
+D) Monitoraggio
+Funzione per la pianificazione, registrazione e visualizzazione di tutte le attività di monitoraggio, dalle avversità alla fenologia e alle analisi qualitative del prodotto;
+Consultazione dei dati registrati, in diversi formati (file csv o xls, grafici, mappe geo-referenziate).
+
+E) Indicatori di sostenibilità
+Differenti indicatori in grado di quantificare la sostenibilità delle scelte colturali intraprese in campo e in azienda.
+
+F) Database dei prodotti fitosanitari
+
+G) Database dei fertilizzanti

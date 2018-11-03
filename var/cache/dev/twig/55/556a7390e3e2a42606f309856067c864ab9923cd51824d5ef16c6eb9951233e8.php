@@ -17,6 +17,7 @@ class __TwigTemplate_70a3400c94cbe7ac26bdf6a63e78b17219a050dc697b129c26562f055eb
             'title' => array($this, 'block_title'),
             'stylesheets' => array($this, 'block_stylesheets'),
             'body' => array($this, 'block_body'),
+            'map' => array($this, 'block_map'),
             'javascripts' => array($this, 'block_javascripts'),
         );
     }
@@ -41,15 +42,15 @@ class __TwigTemplate_70a3400c94cbe7ac26bdf6a63e78b17219a050dc697b129c26562f055eb
         echo "</title>
         <link rel=\"stylesheet\" href=\"/css/bootstrap.min.css\">
         <link rel=\"stylesheet\" href=\"/css/stile.css\">
-        <link rel=\"stylesheet\" href=\"/css/jquery.dataTables.min.css\">
+        <link rel=\"stylesheet\" href=\"/css/jquery.dataTables.min.css\">        
         <link href=\"https://fonts.googleapis.com/css?family=Muli\" rel=\"stylesheet\">
+        <script src=\"/js/gmaps.js\"></script> 
+        <script src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyBl_yz16C7FS39VRFG5R98d4Yb5Yd7hFN8&callback=initMap\" async defer></script>
 \t\t<script src=\"/js/jquery-3.3.1.min.js\"></script>
 \t\t<script src=\"/js/popper.min.js\"></script>
 \t\t<script src=\"/js/bootstrap.min.js\"></script>   
         <script src=\"/js/jquery.dataTables.min.js\"></script>
         <script src=\"/js/dataTables.bootstrap4.min.js\"></script>
-        <script src=\"/js/gmaps.js\"></script> 
-        <script src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyBl_yz16C7FS39VRFG5R98d4Yb5Yd7hFN8&callback=initMap\" async defer></script>
         ";
         // line 18
         $this->displayBlock('stylesheets', $context, $blocks);
@@ -61,7 +62,7 @@ class __TwigTemplate_70a3400c94cbe7ac26bdf6a63e78b17219a050dc697b129c26562f055eb
                 <div class=\"col-lg-12\">
                     <div id=\"logo\">
                         <div class=\"logo-place\">
-                            <h1><span class=\"greenlogo\">Green</span><span class=\"greylogo\">Grey</span><img class=\"img-logo\" src=\"images/oliva.png\"></h1>
+                            <h1><span class=\"greenlogo\">Green</span><span class=\"greylogo\">Gre</span><img class=\"img-logo\" src=\"/images/oliva.png\"></h1>
                         </div>
                         <div class=\"info-place\">
                             ";
@@ -104,11 +105,14 @@ class __TwigTemplate_70a3400c94cbe7ac26bdf6a63e78b17219a050dc697b129c26562f055eb
         // line 54
         echo "        
         
-        ";
+            ";
         // line 56
         $this->displayBlock('body', $context, $blocks);
         // line 57
-        echo "        
+        echo "            ";
+        $this->displayBlock('map', $context, $blocks);
+        // line 58
+        echo "        </div>
         <div id=\"siteinfo\" role=\"contentinfo\">
             <address>
                 <div class=\"thinline\"></div>
@@ -116,10 +120,10 @@ class __TwigTemplate_70a3400c94cbe7ac26bdf6a63e78b17219a050dc697b129c26562f055eb
             </address>  
         </div>        
         ";
-        // line 64
-        $this->displayBlock('javascripts', $context, $blocks);
         // line 65
-        echo "    </body>
+        $this->displayBlock('javascripts', $context, $blocks);
+        echo "        
+    </body>
 </html>
 ";
         
@@ -182,7 +186,24 @@ class __TwigTemplate_70a3400c94cbe7ac26bdf6a63e78b17219a050dc697b129c26562f055eb
 
     }
 
-    // line 64
+    // line 57
+    public function block_map($context, array $blocks = array())
+    {
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "map"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "map"));
+
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 65
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -211,7 +232,7 @@ class __TwigTemplate_70a3400c94cbe7ac26bdf6a63e78b17219a050dc697b129c26562f055eb
 
     public function getDebugInfo()
     {
-        return array (  186 => 64,  169 => 56,  152 => 18,  134 => 6,  122 => 65,  120 => 64,  111 => 57,  109 => 56,  105 => 54,  85 => 37,  83 => 36,  77 => 32,  71 => 30,  69 => 29,  57 => 19,  55 => 18,  40 => 6,  33 => 1,);
+        return array (  207 => 65,  190 => 57,  173 => 56,  156 => 18,  138 => 6,  124 => 65,  115 => 58,  112 => 57,  110 => 56,  106 => 54,  86 => 37,  84 => 36,  78 => 32,  72 => 30,  70 => 29,  58 => 19,  56 => 18,  41 => 6,  34 => 1,);
     }
 
     public function getSourceContext()
@@ -224,15 +245,15 @@ class __TwigTemplate_70a3400c94cbe7ac26bdf6a63e78b17219a050dc697b129c26562f055eb
         <title>{% block title %}GreenGrey Olv Test{% endblock %}</title>
         <link rel=\"stylesheet\" href=\"/css/bootstrap.min.css\">
         <link rel=\"stylesheet\" href=\"/css/stile.css\">
-        <link rel=\"stylesheet\" href=\"/css/jquery.dataTables.min.css\">
+        <link rel=\"stylesheet\" href=\"/css/jquery.dataTables.min.css\">        
         <link href=\"https://fonts.googleapis.com/css?family=Muli\" rel=\"stylesheet\">
+        <script src=\"/js/gmaps.js\"></script> 
+        <script src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyBl_yz16C7FS39VRFG5R98d4Yb5Yd7hFN8&callback=initMap\" async defer></script>
 \t\t<script src=\"/js/jquery-3.3.1.min.js\"></script>
 \t\t<script src=\"/js/popper.min.js\"></script>
 \t\t<script src=\"/js/bootstrap.min.js\"></script>   
         <script src=\"/js/jquery.dataTables.min.js\"></script>
         <script src=\"/js/dataTables.bootstrap4.min.js\"></script>
-        <script src=\"/js/gmaps.js\"></script> 
-        <script src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyBl_yz16C7FS39VRFG5R98d4Yb5Yd7hFN8&callback=initMap\" async defer></script>
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
@@ -241,7 +262,7 @@ class __TwigTemplate_70a3400c94cbe7ac26bdf6a63e78b17219a050dc697b129c26562f055eb
                 <div class=\"col-lg-12\">
                     <div id=\"logo\">
                         <div class=\"logo-place\">
-                            <h1><span class=\"greenlogo\">Green</span><span class=\"greylogo\">Grey</span><img class=\"img-logo\" src=\"images/oliva.png\"></h1>
+                            <h1><span class=\"greenlogo\">Green</span><span class=\"greylogo\">Gre</span><img class=\"img-logo\" src=\"/images/oliva.png\"></h1>
                         </div>
                         <div class=\"info-place\">
                             {% if username is defined and username != null %}
@@ -271,15 +292,16 @@ class __TwigTemplate_70a3400c94cbe7ac26bdf6a63e78b17219a050dc697b129c26562f055eb
             </div> 
             {% endif %}        
         
-        {% block body %}{% endblock %}
-        
+            {% block body %}{% endblock %}
+            {% block map %}{% endblock %}
+        </div>
         <div id=\"siteinfo\" role=\"contentinfo\">
             <address>
                 <div class=\"thinline\"></div>
                 Designed and coded in Sardinia by <a href=\"#\">RnCStudio</a>
             </address>  
         </div>        
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}{% endblock %}        
     </body>
 </html>
 ", "base.html.twig", "/home/fabio/greengrey/templates/base.html.twig");

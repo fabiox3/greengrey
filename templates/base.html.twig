@@ -6,15 +6,15 @@
         <title>{% block title %}GreenGrey Olv Test{% endblock %}</title>
         <link rel="stylesheet" href="/css/bootstrap.min.css">
         <link rel="stylesheet" href="/css/stile.css">
-        <link rel="stylesheet" href="/css/jquery.dataTables.min.css">
+        <link rel="stylesheet" href="/css/jquery.dataTables.min.css">        
         <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+        <script src="/js/gmaps.js"></script> 
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBl_yz16C7FS39VRFG5R98d4Yb5Yd7hFN8&callback=initMap" async defer></script>
 		<script src="/js/jquery-3.3.1.min.js"></script>
 		<script src="/js/popper.min.js"></script>
 		<script src="/js/bootstrap.min.js"></script>   
         <script src="/js/jquery.dataTables.min.js"></script>
         <script src="/js/dataTables.bootstrap4.min.js"></script>
-        <script src="/js/gmaps.js"></script> 
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBl_yz16C7FS39VRFG5R98d4Yb5Yd7hFN8&callback=initMap" async defer></script>
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
@@ -23,7 +23,7 @@
                 <div class="col-lg-12">
                     <div id="logo">
                         <div class="logo-place">
-                            <h1><span class="greenlogo">Green</span><span class="greylogo">Grey</span><img class="img-logo" src="images/oliva.png"></h1>
+                            <h1><span class="greenlogo">Green</span><span class="greylogo">Gre</span><img class="img-logo" src="/images/oliva.png"></h1>
                         </div>
                         <div class="info-place">
                             {% if username is defined and username != null %}
@@ -53,14 +53,15 @@
             </div> 
             {% endif %}        
         
-        {% block body %}{% endblock %}
-        
+            {% block body %}{% endblock %}
+            {% block map %}{% endblock %}
+        </div>
         <div id="siteinfo" role="contentinfo">
             <address>
                 <div class="thinline"></div>
                 Designed and coded in Sardinia by <a href="#">RnCStudio</a>
             </address>  
         </div>        
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}{% endblock %}        
     </body>
 </html>

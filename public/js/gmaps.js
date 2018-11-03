@@ -481,7 +481,7 @@ function initMap() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position){
             map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 18,
+                zoom: 20,
                 center: new google.maps.LatLng(position.coords.latitude,position.coords.longitude),
                 mapTypeId: 'satellite'
             });
@@ -527,7 +527,7 @@ function initMap() {
         });        
     } else {
         map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 18,
+            zoom: 20,
             center: new google.maps.LatLng(39.322928,9.059794),
             mapTypeId: 'satellite'
         }); 

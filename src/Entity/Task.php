@@ -19,7 +19,7 @@ class Task
     /**
      * @ORM\Column(type="string", length=20)
      */
-    private $idTree;
+    private $code;
 
     /**
      * @ORM\Column(type="datetime")
@@ -36,14 +36,14 @@ class Task
         return $this->id;
     }
 
-    public function getIdTree(): ?string
+    public function getCode(): ?string
     {
-        return $this->idTree;
+        return $this->code;
     }
 
-    public function setIdTree(string $idTree): self
+    public function setCode(string $code): self
     {
-        $this->idTree = $idTree;
+        $this->code = $code;
 
         return $this;
     }

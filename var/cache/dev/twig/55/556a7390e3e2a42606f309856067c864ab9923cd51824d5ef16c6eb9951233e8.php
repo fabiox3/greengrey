@@ -43,13 +43,13 @@ class __TwigTemplate_70a3400c94cbe7ac26bdf6a63e78b17219a050dc697b129c26562f055eb
         <link rel=\"stylesheet\" href=\"/css/stile.css\">
         <link rel=\"stylesheet\" href=\"/css/jquery.dataTables.min.css\">
         <link href=\"https://fonts.googleapis.com/css?family=Muli\" rel=\"stylesheet\">
-        <!--<script src=\"/js/gmaps.js\"></script> 
-        <script src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyBl_yz16C7FS39VRFG5R98d4Yb5Yd7hFN8&callback=initMap\" async defer></script>   --> 
 \t\t<script src=\"/js/jquery-3.3.1.min.js\"></script>
 \t\t<script src=\"/js/popper.min.js\"></script>
 \t\t<script src=\"/js/bootstrap.min.js\"></script>   
         <script src=\"/js/jquery.dataTables.min.js\"></script>
         <script src=\"/js/dataTables.bootstrap4.min.js\"></script>
+        <script src=\"/js/gmaps.js\"></script> 
+        <script src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyBl_yz16C7FS39VRFG5R98d4Yb5Yd7hFN8&callback=initMap\" async defer></script>
         ";
         // line 18
         $this->displayBlock('stylesheets', $context, $blocks);
@@ -226,13 +226,13 @@ class __TwigTemplate_70a3400c94cbe7ac26bdf6a63e78b17219a050dc697b129c26562f055eb
         <link rel=\"stylesheet\" href=\"/css/stile.css\">
         <link rel=\"stylesheet\" href=\"/css/jquery.dataTables.min.css\">
         <link href=\"https://fonts.googleapis.com/css?family=Muli\" rel=\"stylesheet\">
-        <!--<script src=\"/js/gmaps.js\"></script> 
-        <script src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyBl_yz16C7FS39VRFG5R98d4Yb5Yd7hFN8&callback=initMap\" async defer></script>   --> 
 \t\t<script src=\"/js/jquery-3.3.1.min.js\"></script>
 \t\t<script src=\"/js/popper.min.js\"></script>
 \t\t<script src=\"/js/bootstrap.min.js\"></script>   
         <script src=\"/js/jquery.dataTables.min.js\"></script>
         <script src=\"/js/dataTables.bootstrap4.min.js\"></script>
+        <script src=\"/js/gmaps.js\"></script> 
+        <script src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyBl_yz16C7FS39VRFG5R98d4Yb5Yd7hFN8&callback=initMap\" async defer></script>
         {% block stylesheets %}{% endblock %}
     </head>
     <body>

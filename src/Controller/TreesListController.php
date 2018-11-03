@@ -16,7 +16,7 @@ class TreesListController extends AbstractController
 		$q = $this->getDoctrine()->getRepository(Trees::class);
 	    $trees = $q->findAll();
 
-        return $this->render('trees_list/index.html.twig', [
+        return $this->render('trees/list.html.twig', [
             'trees' => $trees,
             'username' => (!is_null($this->getUser()))?$this->getUser()->getUsername():null,
         ]);

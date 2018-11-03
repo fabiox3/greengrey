@@ -14,7 +14,9 @@ class TreesController extends AbstractController
 	*/
 	public function treesList()
 	{
-        return $this->render('trees/list.html.twig', []);
+        return $this->render('trees/map.html.twig', [
+            'username' => (!is_null($this->getUser()))?$this->getUser()->getUsername():null
+        ]);
 	}
 
 	/**
@@ -24,8 +26,9 @@ class TreesController extends AbstractController
      */
     public function showTree($cod)
     {
-    	return $this->render('trees/t.html.twig', [
+    	return $this->render('trees/item.html.twig', [
     		'codice' => $cod,
+            'username' => (!is_null($this->getUser()))?$this->getUser()->getUsername():null,
     	]);
     }	
 }

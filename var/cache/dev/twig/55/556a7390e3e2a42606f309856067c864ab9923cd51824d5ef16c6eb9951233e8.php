@@ -42,20 +42,21 @@ class __TwigTemplate_70a3400c94cbe7ac26bdf6a63e78b17219a050dc697b129c26562f055eb
         echo "</title>
         <link rel=\"stylesheet\" href=\"/css/bootstrap.css\">
         <link rel=\"stylesheet\" href=\"/css/stile.css\">
-        <link rel=\"stylesheet\" href=\"/css/jquery.dataTables.min.css\">        
+        <link rel=\"stylesheet\" href=\"/css/datatables.min.css\">
+        <link rel=\"stylesheet\" href=\"/css/all.css\">       
         <link href=\"https://fonts.googleapis.com/css?family=Muli\" rel=\"stylesheet\">
         <script src=\"/js/gmaps.js\"></script> 
         <script src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyBl_yz16C7FS39VRFG5R98d4Yb5Yd7hFN8&callback=initMap\" async defer></script>
 \t\t<script src=\"/js/jquery-3.3.1.min.js\"></script>
 \t\t<script src=\"/js/popper.min.js\"></script>
-\t\t<script src=\"/js/bootstrap.min.js\"></script>   
-        <script src=\"/js/jquery.dataTables.min.js\"></script>
-        <script src=\"/js/dataTables.bootstrap4.min.js\"></script>
+\t\t<script src=\"/js/bootstrap.js\"></script>   
+        <script src=\"/js/datatables.min.js\"></script>
+        <script src=\"/js/all.js\"></script>
         <script src=\"/js/functions.js\"></script>
         ";
-        // line 19
-        $this->displayBlock('stylesheets', $context, $blocks);
         // line 20
+        $this->displayBlock('stylesheets', $context, $blocks);
+        // line 21
         echo "    </head>
     <body>
         <div class=\"row\">
@@ -66,23 +67,23 @@ class __TwigTemplate_70a3400c94cbe7ac26bdf6a63e78b17219a050dc697b129c26562f055eb
                     </div>
                     <div class=\"info-place\">
                         ";
-        // line 29
-        if (((isset($context["username"]) || array_key_exists("username", $context)) && ((isset($context["username"]) || array_key_exists("username", $context) ? $context["username"] : (function () { throw new Twig_Error_Runtime('Variable "username" does not exist.', 29, $this->source); })()) != null))) {
-            // line 30
+        // line 30
+        if (((isset($context["username"]) || array_key_exists("username", $context)) && ((isset($context["username"]) || array_key_exists("username", $context) ? $context["username"] : (function () { throw new Twig_Error_Runtime('Variable "username" does not exist.', 30, $this->source); })()) != null))) {
+            // line 31
             echo "                        <p>Ciao, ";
-            echo twig_escape_filter($this->env, (isset($context["username"]) || array_key_exists("username", $context) ? $context["username"] : (function () { throw new Twig_Error_Runtime('Variable "username" does not exist.', 30, $this->source); })()), "html", null, true);
+            echo twig_escape_filter($this->env, (isset($context["username"]) || array_key_exists("username", $context) ? $context["username"] : (function () { throw new Twig_Error_Runtime('Variable "username" does not exist.', 31, $this->source); })()), "html", null, true);
             echo "&nbsp;&nbsp;[<a href=\"/logout\">Esci</a>]</p>
                         ";
         }
-        // line 32
+        // line 33
         echo "                    </div>
                 </div>
             </div>
         </div>
         ";
-        // line 36
-        if (((isset($context["username"]) || array_key_exists("username", $context)) && ((isset($context["username"]) || array_key_exists("username", $context) ? $context["username"] : (function () { throw new Twig_Error_Runtime('Variable "username" does not exist.', 36, $this->source); })()) != null))) {
-            // line 37
+        // line 37
+        if (((isset($context["username"]) || array_key_exists("username", $context)) && ((isset($context["username"]) || array_key_exists("username", $context) ? $context["username"] : (function () { throw new Twig_Error_Runtime('Variable "username" does not exist.', 37, $this->source); })()) != null))) {
+            // line 38
             echo "        <div class=\"row\">
             <div class=\"col-lg-12\">
                 <div id=\"menu\">
@@ -102,16 +103,16 @@ class __TwigTemplate_70a3400c94cbe7ac26bdf6a63e78b17219a050dc697b129c26562f055eb
         </div> 
         ";
         }
-        // line 54
+        // line 55
         echo "        
     
         ";
-        // line 56
-        $this->displayBlock('body', $context, $blocks);
         // line 57
+        $this->displayBlock('body', $context, $blocks);
+        // line 58
         echo "        ";
         $this->displayBlock('map', $context, $blocks);
-        // line 58
+        // line 59
         echo "        
         <div id=\"siteinfo\" role=\"contentinfo\">
             <address>
@@ -120,7 +121,7 @@ class __TwigTemplate_70a3400c94cbe7ac26bdf6a63e78b17219a050dc697b129c26562f055eb
             </address>  
         </div>        
         ";
-        // line 65
+        // line 66
         $this->displayBlock('javascripts', $context, $blocks);
         echo "        
     </body>
@@ -152,7 +153,7 @@ class __TwigTemplate_70a3400c94cbe7ac26bdf6a63e78b17219a050dc697b129c26562f055eb
 
     }
 
-    // line 19
+    // line 20
     public function block_stylesheets($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -169,7 +170,7 @@ class __TwigTemplate_70a3400c94cbe7ac26bdf6a63e78b17219a050dc697b129c26562f055eb
 
     }
 
-    // line 56
+    // line 57
     public function block_body($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -186,7 +187,7 @@ class __TwigTemplate_70a3400c94cbe7ac26bdf6a63e78b17219a050dc697b129c26562f055eb
 
     }
 
-    // line 57
+    // line 58
     public function block_map($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -203,7 +204,7 @@ class __TwigTemplate_70a3400c94cbe7ac26bdf6a63e78b17219a050dc697b129c26562f055eb
 
     }
 
-    // line 65
+    // line 66
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -232,7 +233,7 @@ class __TwigTemplate_70a3400c94cbe7ac26bdf6a63e78b17219a050dc697b129c26562f055eb
 
     public function getDebugInfo()
     {
-        return array (  207 => 65,  190 => 57,  173 => 56,  156 => 19,  138 => 6,  124 => 65,  115 => 58,  112 => 57,  110 => 56,  106 => 54,  86 => 37,  84 => 36,  78 => 32,  72 => 30,  70 => 29,  59 => 20,  57 => 19,  41 => 6,  34 => 1,);
+        return array (  208 => 66,  191 => 58,  174 => 57,  157 => 20,  139 => 6,  125 => 66,  116 => 59,  113 => 58,  111 => 57,  107 => 55,  87 => 38,  85 => 37,  79 => 33,  73 => 31,  71 => 30,  60 => 21,  58 => 20,  41 => 6,  34 => 1,);
     }
 
     public function getSourceContext()
@@ -245,15 +246,16 @@ class __TwigTemplate_70a3400c94cbe7ac26bdf6a63e78b17219a050dc697b129c26562f055eb
         <title>{% block title %}GreenGrey Olv Test{% endblock %}</title>
         <link rel=\"stylesheet\" href=\"/css/bootstrap.css\">
         <link rel=\"stylesheet\" href=\"/css/stile.css\">
-        <link rel=\"stylesheet\" href=\"/css/jquery.dataTables.min.css\">        
+        <link rel=\"stylesheet\" href=\"/css/datatables.min.css\">
+        <link rel=\"stylesheet\" href=\"/css/all.css\">       
         <link href=\"https://fonts.googleapis.com/css?family=Muli\" rel=\"stylesheet\">
         <script src=\"/js/gmaps.js\"></script> 
         <script src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyBl_yz16C7FS39VRFG5R98d4Yb5Yd7hFN8&callback=initMap\" async defer></script>
 \t\t<script src=\"/js/jquery-3.3.1.min.js\"></script>
 \t\t<script src=\"/js/popper.min.js\"></script>
-\t\t<script src=\"/js/bootstrap.min.js\"></script>   
-        <script src=\"/js/jquery.dataTables.min.js\"></script>
-        <script src=\"/js/dataTables.bootstrap4.min.js\"></script>
+\t\t<script src=\"/js/bootstrap.js\"></script>   
+        <script src=\"/js/datatables.min.js\"></script>
+        <script src=\"/js/all.js\"></script>
         <script src=\"/js/functions.js\"></script>
         {% block stylesheets %}{% endblock %}
     </head>

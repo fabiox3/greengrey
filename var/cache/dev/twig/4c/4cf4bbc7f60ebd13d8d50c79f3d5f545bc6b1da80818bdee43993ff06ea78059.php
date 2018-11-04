@@ -51,7 +51,7 @@ class __TwigTemplate_0f5fe2bc11e0d40965cc97909eb7f5c7e42b4c62cd9f241914d15c8bb37
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Lista alberi - GreenGrey";
+        echo "GreenGrey :: Lista Olivi";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -204,7 +204,7 @@ class __TwigTemplate_0f5fe2bc11e0d40965cc97909eb7f5c7e42b4c62cd9f241914d15c8bb37
     {
         return new Twig_Source("{% extends \"base.html.twig\" %}
 
-{% block title %}Lista alberi - GreenGrey{% endblock %}
+{% block title %}GreenGrey :: Lista Olivi{% endblock %}
 
 {% block body %}
 {% block javascripts %}

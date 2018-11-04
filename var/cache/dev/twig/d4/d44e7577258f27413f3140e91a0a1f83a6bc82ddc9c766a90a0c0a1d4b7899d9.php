@@ -14,6 +14,7 @@ class __TwigTemplate_31104752f148223a0f4fc68ff9ee3f6fbae71d03882a2e63512db573c8e
         // line 1
         $this->parent = $this->loadTemplate("base.html.twig", "default/index.html.twig", 1);
         $this->blocks = array(
+            'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
         );
     }
@@ -41,6 +42,24 @@ class __TwigTemplate_31104752f148223a0f4fc68ff9ee3f6fbae71d03882a2e63512db573c8e
     }
 
     // line 3
+    public function block_title($context, array $blocks = array())
+    {
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+
+        echo "GreenGrey :: Home";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 5
     public function block_body($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -49,37 +68,69 @@ class __TwigTemplate_31104752f148223a0f4fc68ff9ee3f6fbae71d03882a2e63512db573c8e
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 4
+        // line 6
         echo "\t";
-        if (((isset($context["username"]) || array_key_exists("username", $context) ? $context["username"] : (function () { throw new Twig_Error_Runtime('Variable "username" does not exist.', 4, $this->source); })()) != null)) {
-            // line 5
-            echo "\t<div class=\"row\">
-\t\t<div class=\"col-lg-12\">
-\t\t\tCiao, ";
+        if (((isset($context["username"]) || array_key_exists("username", $context) ? $context["username"] : (function () { throw new Twig_Error_Runtime('Variable "username" does not exist.', 6, $this->source); })()) != null)) {
             // line 7
-            echo twig_escape_filter($this->env, (isset($context["username"]) || array_key_exists("username", $context) ? $context["username"] : (function () { throw new Twig_Error_Runtime('Variable "username" does not exist.', 7, $this->source); })()), "html", null, true);
-            echo "! Cosa vuoi fare oggi?
+            echo "\t<div class=\"container text-center\">
+\t\t<br><br>
+\t\t<h2 class=\"welcome\">COSA VUOI FARE OGGI?</h2>
+\t\t<div class=\"row\">
+\t\t\t<div class=\"col-lg-4\">
+\t\t\t\t<div class=\"panel panel-default\">
+\t\t\t\t  \t<div class=\"panel-body\">
+\t\t\t\t  \t\t<i class=\"fas fa-map-marker-alt fa-3x\"></i>
+\t\t\t\t  \t</div>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t\t<div class=\"col-lg-4\">
+\t\t\t\t<div class=\"panel panel-default\">
+\t\t\t\t  \t<div class=\"panel-body\">
+\t\t\t\t  \t\t<i class=\"fas fa-list-ol fa-3x\"></i>
+\t\t\t\t  \t</div>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t\t<div class=\"col-lg-4\">
+\t\t\t\t<div class=\"panel panel-default\">
+\t\t\t\t  \t<div class=\"panel-body\">
+\t\t\t\t  \t\t<i class=\"fas fa-sun fa-3x\"></i>
+\t\t\t\t  \t</div>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</div>
+\t\t<div class=\"row\">
+\t\t\t<div class=\"col-lg-4\">
+\t\t\t\t<div class=\"panel panel-default\">
+\t\t\t\t  \t<div class=\"panel-body\">
+\t\t\t\t  \t\t<a href=\"/trees\">Geolocalizzati nell'oliveto</a>
+\t\t\t\t  \t</div>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t\t<div class=\"col-lg-4\">
+\t\t\t\t<div class=\"panel panel-default\">
+\t\t\t\t  \t<div class=\"panel-body\">
+\t\t\t\t  \t\t<a href=\"/treeslist\">Consulta la mappatura degli alberi</a>
+\t\t\t\t  \t</div>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t\t<div class=\"col-lg-4\">
+\t\t\t\t<div class=\"panel panel-default\">
+\t\t\t\t  \t<div class=\"panel-body\">
+\t\t\t\t  \t\t<a href=\"/meteo\">Consulta il meteo</a>
+\t\t\t\t  \t</div>
+\t\t\t\t</div>
+\t\t\t</div>\t\t\t\t
 \t\t</div>\t
-\t</div> 
-\t<div class=\"row\">
-\t\t<div class=\"col-lg-4\">1</div>
-\t\t<div class=\"col-lg-4\">2</div>
-\t\t<div class=\"col-lg-4\">3</div>
 \t</div>
-\t<div class=\"row\">
-\t\t<div class=\"col-lg-4\">4</div>
-\t\t<div class=\"col-lg-4\">5</div>
-\t\t<div class=\"col-lg-4\">6</div>
-\t</div>\t
 \t";
         }
-        // line 21
+        // line 58
         echo "
 
 \t";
-        // line 23
-        if (((isset($context["username"]) || array_key_exists("username", $context) ? $context["username"] : (function () { throw new Twig_Error_Runtime('Variable "username" does not exist.', 23, $this->source); })()) == null)) {
-            // line 24
+        // line 60
+        if (((isset($context["username"]) || array_key_exists("username", $context) ? $context["username"] : (function () { throw new Twig_Error_Runtime('Variable "username" does not exist.', 60, $this->source); })()) == null)) {
+            // line 61
             echo "\t<div class=\"row\">
 \t\t<div class=\"col-lg-12\">\t
 \t\t\t<a href=\"/login\" class=\"btn btn-info\">Accedi</a>\t
@@ -107,30 +158,67 @@ class __TwigTemplate_31104752f148223a0f4fc68ff9ee3f6fbae71d03882a2e63512db573c8e
 
     public function getDebugInfo()
     {
-        return array (  83 => 24,  81 => 23,  77 => 21,  60 => 7,  56 => 5,  53 => 4,  44 => 3,  15 => 1,);
+        return array (  134 => 61,  132 => 60,  128 => 58,  75 => 7,  72 => 6,  63 => 5,  45 => 3,  15 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Twig_Source("{% extends \"base.html.twig\" %}
 
+{% block title %}GreenGrey :: Home{% endblock %}
+
 {% block body %}
 \t{% if username != null %}
-\t<div class=\"row\">
-\t\t<div class=\"col-lg-12\">
-\t\t\tCiao, {{ username }}! Cosa vuoi fare oggi?
+\t<div class=\"container text-center\">
+\t\t<br><br>
+\t\t<h2 class=\"welcome\">COSA VUOI FARE OGGI?</h2>
+\t\t<div class=\"row\">
+\t\t\t<div class=\"col-lg-4\">
+\t\t\t\t<div class=\"panel panel-default\">
+\t\t\t\t  \t<div class=\"panel-body\">
+\t\t\t\t  \t\t<i class=\"fas fa-map-marker-alt fa-3x\"></i>
+\t\t\t\t  \t</div>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t\t<div class=\"col-lg-4\">
+\t\t\t\t<div class=\"panel panel-default\">
+\t\t\t\t  \t<div class=\"panel-body\">
+\t\t\t\t  \t\t<i class=\"fas fa-list-ol fa-3x\"></i>
+\t\t\t\t  \t</div>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t\t<div class=\"col-lg-4\">
+\t\t\t\t<div class=\"panel panel-default\">
+\t\t\t\t  \t<div class=\"panel-body\">
+\t\t\t\t  \t\t<i class=\"fas fa-sun fa-3x\"></i>
+\t\t\t\t  \t</div>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</div>
+\t\t<div class=\"row\">
+\t\t\t<div class=\"col-lg-4\">
+\t\t\t\t<div class=\"panel panel-default\">
+\t\t\t\t  \t<div class=\"panel-body\">
+\t\t\t\t  \t\t<a href=\"/trees\">Geolocalizzati nell'oliveto</a>
+\t\t\t\t  \t</div>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t\t<div class=\"col-lg-4\">
+\t\t\t\t<div class=\"panel panel-default\">
+\t\t\t\t  \t<div class=\"panel-body\">
+\t\t\t\t  \t\t<a href=\"/treeslist\">Consulta la mappatura degli alberi</a>
+\t\t\t\t  \t</div>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t\t<div class=\"col-lg-4\">
+\t\t\t\t<div class=\"panel panel-default\">
+\t\t\t\t  \t<div class=\"panel-body\">
+\t\t\t\t  \t\t<a href=\"/meteo\">Consulta il meteo</a>
+\t\t\t\t  \t</div>
+\t\t\t\t</div>
+\t\t\t</div>\t\t\t\t
 \t\t</div>\t
-\t</div> 
-\t<div class=\"row\">
-\t\t<div class=\"col-lg-4\">1</div>
-\t\t<div class=\"col-lg-4\">2</div>
-\t\t<div class=\"col-lg-4\">3</div>
 \t</div>
-\t<div class=\"row\">
-\t\t<div class=\"col-lg-4\">4</div>
-\t\t<div class=\"col-lg-4\">5</div>
-\t\t<div class=\"col-lg-4\">6</div>
-\t</div>\t
 \t{% endif %}
 
 

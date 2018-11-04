@@ -25,34 +25,37 @@
 	} );
 </script>
 {% endblock %}
-<div class="row">
-	<div class="col-lg-12">
-		<br><br>
-		<table id="treelist" class="table">
-			<thead>
-				<tr>
-					<th scope="col">#</td>
-					<th scope="col">Codice</td>
-					<th scope="col">Latitudine</td>
-					<th scope="col">Longitudine</td>
-					<th scope="col">Sezione</td>
-					<th scope="col">Fila</td>
-				</tr>
-			</thead>
-			<tbody>
-			{% for t in trees %}
-				<tr>
-					<td>{{ t.id }}</td>
-					<td>{{ t.code }}</td>
-					<td>{{ t.latitude }}</td>
-					<td>{{ t.longitude }}</td>
-					<td>{{ t.section }}</td>
-					<td>{{ t.row }}</td>
-				</tr>
-			{% endfor %} 		
-			</tbody>
-		</table> 
-	</div>
-</div>	
- 
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+			<br><br>
+			<table id="treelist" class="table">
+				<thead>
+					<tr>
+						<th scope="col">#</td>
+						<th scope="col">Codice</td>
+						<th scope="col">Latitudine</td>
+						<th scope="col">Longitudine</td>
+						<th scope="col">Sezione</td>
+						<th scope="col">Fila</td>
+						<th scope="col">Scheda</td>
+					</tr>
+				</thead>
+				<tbody>
+				{% for t in trees %}
+					<tr>
+						<td>{{ t.id }}</td>
+						<td>{{ t.code }}</td>
+						<td>{{ t.latitude }}</td>
+						<td>{{ t.longitude }}</td>
+						<td>{{ t.section }}</td>
+						<td>{{ t.row }}</td>
+						<td><a href="/trees/{{t.code}}">Vedi</a></td>
+					</tr>
+				{% endfor %} 		
+				</tbody>
+			</table> 
+		</div>
+	</div>	
+</div> 
 {% endblock %}

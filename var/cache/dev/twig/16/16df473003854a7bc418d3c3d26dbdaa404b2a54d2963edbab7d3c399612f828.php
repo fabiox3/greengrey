@@ -176,10 +176,6 @@ class __TwigTemplate_9ad01179ec6f6c5bad33702af45aa4bb9cdfd07da116604c20fe69633bd
             // line 70
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["v"], "username", array()), "html", null, true);
             echo " ha scritto:</span>
-\t\t\t\t\t\t\t\t\t<a href=\"/trees/delete/";
-            // line 71
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["v"], "id", array()), "html", null, true);
-            echo "\">cancella</a>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</header>
 \t\t\t\t\t\t\t<div class=\"whiteempty\"></div>
@@ -188,11 +184,15 @@ class __TwigTemplate_9ad01179ec6f6c5bad33702af45aa4bb9cdfd07da116604c20fe69633bd
 \t\t\t\t\t\t\t\t<div class=\"comment-content\">
 \t\t\t\t\t\t\t\t\t<div class=\"tpost\">\t
 \t\t\t\t\t\t\t\t\t\t<p>";
-            // line 79
+            // line 78
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["v"], "note", array()), "html", null, true);
             echo "</p>
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<span class=\"deteletask\"><a rel=\"nofollow\" class=\"comment-reply-login\" href=\"/trees/delete/";
+            // line 81
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["v"], "id", array()), "html", null, true);
+            echo "\">Elimina</a></span>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</article>
 \t\t\t\t\t</li>\t\t\t
@@ -227,7 +227,7 @@ class __TwigTemplate_9ad01179ec6f6c5bad33702af45aa4bb9cdfd07da116604c20fe69633bd
 
     public function getDebugInfo()
     {
-        return array (  205 => 86,  192 => 79,  181 => 71,  177 => 70,  171 => 69,  163 => 65,  159 => 64,  149 => 57,  138 => 49,  132 => 46,  124 => 41,  118 => 38,  112 => 35,  100 => 26,  94 => 23,  86 => 18,  80 => 15,  73 => 11,  66 => 6,  57 => 5,  36 => 1,  18 => 3,  15 => 1,);
+        return array (  205 => 86,  194 => 81,  188 => 78,  177 => 70,  171 => 69,  163 => 65,  159 => 64,  149 => 57,  138 => 49,  132 => 46,  124 => 41,  118 => 38,  112 => 35,  100 => 26,  94 => 23,  86 => 18,  80 => 15,  73 => 11,  66 => 6,  57 => 5,  36 => 1,  18 => 3,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -302,7 +302,6 @@ class __TwigTemplate_9ad01179ec6f6c5bad33702af45aa4bb9cdfd07da116604c20fe69633bd
 \t\t\t\t\t\t\t\t<div class=\"c-left\">
 \t\t\t\t\t\t\t\t\t<h5>Il {{ v.date|date(\"m/d/Y\") }} alle ore {{ v.date|date(\"H:i\") }}</h5>
 \t\t\t\t\t\t\t\t\t<span class=\"comment-date\">{{ v.username }} ha scritto:</span>
-\t\t\t\t\t\t\t\t\t<a href=\"/trees/delete/{{ v.id }}\">cancella</a>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</header>
 \t\t\t\t\t\t\t<div class=\"whiteempty\"></div>
@@ -313,6 +312,7 @@ class __TwigTemplate_9ad01179ec6f6c5bad33702af45aa4bb9cdfd07da116604c20fe69633bd
 \t\t\t\t\t\t\t\t\t\t<p>{{ v.note }}</p>
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<span class=\"deteletask\"><a rel=\"nofollow\" class=\"comment-reply-login\" href=\"/trees/delete/{{ v.id }}\">Elimina</a></span>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</article>
 \t\t\t\t\t</li>\t\t\t

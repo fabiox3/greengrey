@@ -68,7 +68,6 @@
 								<div class="c-left">
 									<h5>Il {{ v.date|date("m/d/Y") }} alle ore {{ v.date|date("H:i") }}</h5>
 									<span class="comment-date">{{ v.username }} ha scritto:</span>
-									<a href="/trees/delete/{{ v.id }}">cancella</a>
 								</div>
 							</header>
 							<div class="whiteempty"></div>
@@ -79,6 +78,7 @@
 										<p>{{ v.note }}</p>
 									</div>
 								</div>
+								<span class="deteletask"><a rel="nofollow" class="comment-reply-login" href="/trees/delete/{{ v.id }}">Elimina</a></span>
 							</div>
 						</article>
 					</li>			

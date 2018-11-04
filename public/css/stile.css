@@ -290,3 +290,13 @@ ol.commentslist li {
 a.show-form-task {
 
 }
+
+span.deteletask {
+    float: right;
+    display: inline-block;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 1em;
+    padding: 0 30px 30px 0;
+}

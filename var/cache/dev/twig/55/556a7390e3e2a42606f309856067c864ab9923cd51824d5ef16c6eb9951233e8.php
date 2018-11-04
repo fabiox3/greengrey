@@ -40,7 +40,7 @@ class __TwigTemplate_70a3400c94cbe7ac26bdf6a63e78b17219a050dc697b129c26562f055eb
         // line 6
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
-        <link rel=\"stylesheet\" href=\"/css/bootstrap.min.css\">
+        <link rel=\"stylesheet\" href=\"/css/bootstrap.css\">
         <link rel=\"stylesheet\" href=\"/css/stile.css\">
         <link rel=\"stylesheet\" href=\"/css/jquery.dataTables.min.css\">        
         <link href=\"https://fonts.googleapis.com/css?family=Muli\" rel=\"stylesheet\">
@@ -51,68 +51,68 @@ class __TwigTemplate_70a3400c94cbe7ac26bdf6a63e78b17219a050dc697b129c26562f055eb
 \t\t<script src=\"/js/bootstrap.min.js\"></script>   
         <script src=\"/js/jquery.dataTables.min.js\"></script>
         <script src=\"/js/dataTables.bootstrap4.min.js\"></script>
+        <script src=\"/js/functions.js\"></script>
         ";
-        // line 18
-        $this->displayBlock('stylesheets', $context, $blocks);
         // line 19
+        $this->displayBlock('stylesheets', $context, $blocks);
+        // line 20
         echo "    </head>
     <body>
-        <div class=\"container\">
-            <div class=\"row\">
-                <div class=\"col-lg-12\">
-                    <div id=\"logo\">
-                        <div class=\"logo-place\">
-                            <h1><span class=\"greenlogo\">Green</span><span class=\"greylogo\">Gre</span><img class=\"img-logo\" src=\"/images/oliva.png\"></h1>
-                        </div>
-                        <div class=\"info-place\">
-                            ";
+        <div class=\"row\">
+            <div class=\"col-lg-12\">
+                <div id=\"logo\">
+                    <div class=\"logo-place\">
+                        <h1><span class=\"greenlogo\">Green</span><span class=\"greylogo\">Gre</span><img class=\"img-logo\" src=\"/images/oliva.png\"></h1>
+                    </div>
+                    <div class=\"info-place\">
+                        ";
         // line 29
         if (((isset($context["username"]) || array_key_exists("username", $context)) && ((isset($context["username"]) || array_key_exists("username", $context) ? $context["username"] : (function () { throw new Twig_Error_Runtime('Variable "username" does not exist.', 29, $this->source); })()) != null))) {
             // line 30
-            echo "                            <p>Ciao, ";
+            echo "                        <p>Ciao, ";
             echo twig_escape_filter($this->env, (isset($context["username"]) || array_key_exists("username", $context) ? $context["username"] : (function () { throw new Twig_Error_Runtime('Variable "username" does not exist.', 30, $this->source); })()), "html", null, true);
             echo "&nbsp;&nbsp;[<a href=\"/logout\">Esci</a>]</p>
-                            ";
+                        ";
         }
         // line 32
-        echo "                        </div>
-                    </div>
+        echo "                    </div>
                 </div>
             </div>
-            ";
+        </div>
+        ";
         // line 36
         if (((isset($context["username"]) || array_key_exists("username", $context)) && ((isset($context["username"]) || array_key_exists("username", $context) ? $context["username"] : (function () { throw new Twig_Error_Runtime('Variable "username" does not exist.', 36, $this->source); })()) != null))) {
             // line 37
-            echo "            <div class=\"row\">
-                <div class=\"col-lg-12\">
-                    <div id=\"menu\">
-                        <nav class=\"nav-main\">  
-                            <div class=\"menu-all-pages-container\">
-                                <ul id=\"menu-all-pages\" class=\"menu\">
-                                    <li class=\"menu-item current-menu-item\"><a href=\"/home\">Home</a></li>
-                                    <li class=\"menu-item\"><a href=\"/trees\">Mappa</a>
-                                    <li class=\"menu-item\"><a href=\"/treeslist\">Oliveto</a>    
-                                    <li class=\"menu-item\"><a href=\"/calendario\">Calendario</a>
-                                    <li class=\"menu-item\"><a href=\"/meteo\">Meteo</a>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
+            echo "        <div class=\"row\">
+            <div class=\"col-lg-12\">
+                <div id=\"menu\">
+                    <nav class=\"nav-main\">  
+                        <div class=\"menu-all-pages-container\">
+                            <ul id=\"menu-all-pages\" class=\"menu\">
+                                <li class=\"menu-item current-menu-item\"><a href=\"/home\">Home</a></li>
+                                <li class=\"menu-item\"><a href=\"/trees\">Mappa</a>
+                                <li class=\"menu-item\"><a href=\"/treeslist\">Oliveto</a>    
+                                <li class=\"menu-item\"><a href=\"/calendario\">Calendario</a>
+                                <li class=\"menu-item\"><a href=\"/meteo\">Meteo</a>
+                            </ul>
+                        </div>
+                    </nav>
                 </div>
-            </div> 
-            ";
+            </div>
+        </div> 
+        ";
         }
         // line 54
         echo "        
-        
-            ";
+    
+        ";
         // line 56
         $this->displayBlock('body', $context, $blocks);
         // line 57
-        echo "            ";
+        echo "        ";
         $this->displayBlock('map', $context, $blocks);
         // line 58
-        echo "        </div>
+        echo "        
         <div id=\"siteinfo\" role=\"contentinfo\">
             <address>
                 <div class=\"thinline\"></div>
@@ -152,7 +152,7 @@ class __TwigTemplate_70a3400c94cbe7ac26bdf6a63e78b17219a050dc697b129c26562f055eb
 
     }
 
-    // line 18
+    // line 19
     public function block_stylesheets($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -232,7 +232,7 @@ class __TwigTemplate_70a3400c94cbe7ac26bdf6a63e78b17219a050dc697b129c26562f055eb
 
     public function getDebugInfo()
     {
-        return array (  207 => 65,  190 => 57,  173 => 56,  156 => 18,  138 => 6,  124 => 65,  115 => 58,  112 => 57,  110 => 56,  106 => 54,  86 => 37,  84 => 36,  78 => 32,  72 => 30,  70 => 29,  58 => 19,  56 => 18,  41 => 6,  34 => 1,);
+        return array (  207 => 65,  190 => 57,  173 => 56,  156 => 19,  138 => 6,  124 => 65,  115 => 58,  112 => 57,  110 => 56,  106 => 54,  86 => 37,  84 => 36,  78 => 32,  72 => 30,  70 => 29,  59 => 20,  57 => 19,  41 => 6,  34 => 1,);
     }
 
     public function getSourceContext()
@@ -243,7 +243,7 @@ class __TwigTemplate_70a3400c94cbe7ac26bdf6a63e78b17219a050dc697b129c26562f055eb
         <meta charset=\"utf-8\">
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">
         <title>{% block title %}GreenGrey Olv Test{% endblock %}</title>
-        <link rel=\"stylesheet\" href=\"/css/bootstrap.min.css\">
+        <link rel=\"stylesheet\" href=\"/css/bootstrap.css\">
         <link rel=\"stylesheet\" href=\"/css/stile.css\">
         <link rel=\"stylesheet\" href=\"/css/jquery.dataTables.min.css\">        
         <link href=\"https://fonts.googleapis.com/css?family=Muli\" rel=\"stylesheet\">
@@ -254,47 +254,47 @@ class __TwigTemplate_70a3400c94cbe7ac26bdf6a63e78b17219a050dc697b129c26562f055eb
 \t\t<script src=\"/js/bootstrap.min.js\"></script>   
         <script src=\"/js/jquery.dataTables.min.js\"></script>
         <script src=\"/js/dataTables.bootstrap4.min.js\"></script>
+        <script src=\"/js/functions.js\"></script>
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
-        <div class=\"container\">
-            <div class=\"row\">
-                <div class=\"col-lg-12\">
-                    <div id=\"logo\">
-                        <div class=\"logo-place\">
-                            <h1><span class=\"greenlogo\">Green</span><span class=\"greylogo\">Gre</span><img class=\"img-logo\" src=\"/images/oliva.png\"></h1>
-                        </div>
-                        <div class=\"info-place\">
-                            {% if username is defined and username != null %}
-                            <p>Ciao, {{ username }}&nbsp;&nbsp;[<a href=\"/logout\">Esci</a>]</p>
-                            {% endif %}
-                        </div>
+        <div class=\"row\">
+            <div class=\"col-lg-12\">
+                <div id=\"logo\">
+                    <div class=\"logo-place\">
+                        <h1><span class=\"greenlogo\">Green</span><span class=\"greylogo\">Gre</span><img class=\"img-logo\" src=\"/images/oliva.png\"></h1>
+                    </div>
+                    <div class=\"info-place\">
+                        {% if username is defined and username != null %}
+                        <p>Ciao, {{ username }}&nbsp;&nbsp;[<a href=\"/logout\">Esci</a>]</p>
+                        {% endif %}
                     </div>
                 </div>
             </div>
-            {% if username is defined and username != null %}
-            <div class=\"row\">
-                <div class=\"col-lg-12\">
-                    <div id=\"menu\">
-                        <nav class=\"nav-main\">  
-                            <div class=\"menu-all-pages-container\">
-                                <ul id=\"menu-all-pages\" class=\"menu\">
-                                    <li class=\"menu-item current-menu-item\"><a href=\"/home\">Home</a></li>
-                                    <li class=\"menu-item\"><a href=\"/trees\">Mappa</a>
-                                    <li class=\"menu-item\"><a href=\"/treeslist\">Oliveto</a>    
-                                    <li class=\"menu-item\"><a href=\"/calendario\">Calendario</a>
-                                    <li class=\"menu-item\"><a href=\"/meteo\">Meteo</a>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-            </div> 
-            {% endif %}        
-        
-            {% block body %}{% endblock %}
-            {% block map %}{% endblock %}
         </div>
+        {% if username is defined and username != null %}
+        <div class=\"row\">
+            <div class=\"col-lg-12\">
+                <div id=\"menu\">
+                    <nav class=\"nav-main\">  
+                        <div class=\"menu-all-pages-container\">
+                            <ul id=\"menu-all-pages\" class=\"menu\">
+                                <li class=\"menu-item current-menu-item\"><a href=\"/home\">Home</a></li>
+                                <li class=\"menu-item\"><a href=\"/trees\">Mappa</a>
+                                <li class=\"menu-item\"><a href=\"/treeslist\">Oliveto</a>    
+                                <li class=\"menu-item\"><a href=\"/calendario\">Calendario</a>
+                                <li class=\"menu-item\"><a href=\"/meteo\">Meteo</a>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div> 
+        {% endif %}        
+    
+        {% block body %}{% endblock %}
+        {% block map %}{% endblock %}
+        
         <div id=\"siteinfo\" role=\"contentinfo\">
             <address>
                 <div class=\"thinline\"></div>

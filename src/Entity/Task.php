@@ -31,6 +31,11 @@ class Task
      */
     private $note;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $username;    
+
     public function getId(): ?int
     {
         return $this->id;
@@ -71,4 +76,16 @@ class Task
 
         return $this;
     }
+
+    public function getUsername(): ?string
+    {
+        return $this->username;
+    }
+
+    public function setUsername(string $username): self
+    {
+        $this->username = $username;
+
+        return $this;
+    }    
 }

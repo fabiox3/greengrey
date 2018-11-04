@@ -10,6 +10,11 @@ html, body {
     line-height: normal;
 }	
 
+.container {
+   min-height:100%;
+   position:relative;
+}
+
 #map {
     height: 100%;
     min-height: 500px;
@@ -123,7 +128,8 @@ a {
 
 #siteinfo {
 	position: relative;
-	bottom: 0px;
+    clear: both;   
+	bottom: 0;
     float: left;
     width: 100%;
     height: 50px;
@@ -146,4 +152,95 @@ a {
     height: 1px;
     background: rgba(255,255,255,0.5);
     margin: 1px 0 0 0;
+}
+
+h2#welcome {
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0 0 20px 0;    
+}
+
+.colour-orange {
+    color: #b3783e;
+}
+
+ol.commentslist {
+    float: left;
+    width: 100%;
+    margin: 30px 0 0 0;
+    list-style: none;
+}
+
+ol.commentslist li {
+    float: left;
+    width: 100%;
+}
+
+.comment-body {
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+    background: #fafafa;
+}
+
+.c-left {
+    float: left;
+}
+
+.comment-body header h5 {
+    font-size: 1.2em;
+    font-weight: 300;
+    margin-top: 4px;
+    color: #b3783e;
+    font-size: 1.3em;
+}
+
+.comment-body header {
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border: 30px solid transparent;
+    background: rgba(0,0,0,0.02);
+    clear: both;
+}
+
+.whiteempty {
+    float: left;
+    width: 100%;
+    height: 2px;
+    background: #999;
+}
+
+.comment-box {
+    float: left;
+    width: 100%;
+}
+
+.comment-content {
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border-top: 30px solid transparent;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 0 solid transparent;
+}
+
+#comment-wrap .tpost {
+    border: none!important;
+    margin: 0!important;
+    padding: 0!important;
+}
+
+.tpost p {
+    font-size: 1.36em;
+    line-height: 1.6em;
+    margin: 0 0 20px 0;
 }

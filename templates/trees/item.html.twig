@@ -4,8 +4,55 @@
     <div class="container">
     	<div class="row">
     		<div class="col-lg-12">
-    			Stai visualizzando il codice {{ codice }}
+    			<br><br>
+				<div class="panel panel-default text-center">
+				  	<div class="panel-heading"><h2 class="welcome">SCHEDA OLIVO <span class="colour-orange">{{ codice }}</span></h2></div>
+				  	<div class="panel-body">
+				  		<div class="row">
+					    	<div class="col-md-6">
+					    		LATITUDINE: <strong>{{ infotree.latitude }}</strong>
+					    	</div>
+					    	<div class="col-md-6">
+					    		SEZIONE: <strong>{{ infotree.section }}</strong>
+					    	</div>
+					    </div>	
+					    <div class="row">	
+					    	<div class="col-md-6">
+					    		LONGITUDINE: <strong>{{ infotree.longitude }}</strong>
+					    	</div>					    				    	
+					    	<div class="col-md-6">
+					    		FILA: <strong>{{ infotree.row }}</strong>
+					    	</div>	
+				    	</div>			    				    	
+				  	</div>
+				</div>
     		</div>
+    	</div>	
+    	<div class="row">
+			<ol class="commentslist"> 		 
+			    {% for k, v in datatree %}
+				<li id="comment-{{k}}">
+					<article class="comment comment-body">
+						<header>
+							<div class="c-left">
+								<h5>Il {{ v.date|date("m/d/Y") }} alle ore {{ v.date|date("H:i") }}</h5>
+								<span class="comment-date">{{ v.username }} ha scritto:</span>
+								<p></p>
+							</div>
+						</header>
+						<div class="whiteempty"></div>
+
+						<div class="comment-box">
+							<div class="comment-content">
+								<div class="tpost">	
+									<p>{{ v.note }}</p>
+								</div>
+							</div>
+						</div>
+					</article>
+				</li>			
+			    {% endfor %}
+			</ol>    		
 		</div>
     </div>
 {% endblock %}

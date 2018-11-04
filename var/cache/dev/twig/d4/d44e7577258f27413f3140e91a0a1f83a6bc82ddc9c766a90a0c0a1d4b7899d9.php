@@ -50,31 +50,43 @@ class __TwigTemplate_31104752f148223a0f4fc68ff9ee3f6fbae71d03882a2e63512db573c8e
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
-        echo "\t<div class=\"row\">
+        echo "\t";
+        if (((isset($context["username"]) || array_key_exists("username", $context) ? $context["username"] : (function () { throw new Twig_Error_Runtime('Variable "username" does not exist.', 4, $this->source); })()) != null)) {
+            // line 5
+            echo "\t<div class=\"row\">
 \t\t<div class=\"col-lg-12\">
-\t\t\t";
-        // line 6
-        if (((isset($context["username"]) || array_key_exists("username", $context) ? $context["username"] : (function () { throw new Twig_Error_Runtime('Variable "username" does not exist.', 6, $this->source); })()) != null)) {
+\t\t\tCiao, ";
             // line 7
-            echo "\t\t\tCiao, ";
             echo twig_escape_filter($this->env, (isset($context["username"]) || array_key_exists("username", $context) ? $context["username"] : (function () { throw new Twig_Error_Runtime('Variable "username" does not exist.', 7, $this->source); })()), "html", null, true);
             echo "! Cosa vuoi fare oggi?
-\t\t\t";
-        }
-        // line 9
-        echo "
-\t\t\t";
-        // line 10
-        if (((isset($context["username"]) || array_key_exists("username", $context) ? $context["username"] : (function () { throw new Twig_Error_Runtime('Variable "username" does not exist.', 10, $this->source); })()) == null)) {
-            // line 11
-            echo "\t\t\t<a href=\"/login\" class=\"btn btn-info\">Accedi</a>\t
-\t\t\t";
-        }
-        // line 13
-        echo "\t\t\t
 \t\t</div>\t
 \t</div> 
-";
+\t<div class=\"row\">
+\t\t<div class=\"col-lg-4\">1</div>
+\t\t<div class=\"col-lg-4\">2</div>
+\t\t<div class=\"col-lg-4\">3</div>
+\t</div>
+\t<div class=\"row\">
+\t\t<div class=\"col-lg-4\">4</div>
+\t\t<div class=\"col-lg-4\">5</div>
+\t\t<div class=\"col-lg-4\">6</div>
+\t</div>\t
+\t";
+        }
+        // line 21
+        echo "
+
+\t";
+        // line 23
+        if (((isset($context["username"]) || array_key_exists("username", $context) ? $context["username"] : (function () { throw new Twig_Error_Runtime('Variable "username" does not exist.', 23, $this->source); })()) == null)) {
+            // line 24
+            echo "\t<div class=\"row\">
+\t\t<div class=\"col-lg-12\">\t
+\t\t\t<a href=\"/login\" class=\"btn btn-info\">Accedi</a>\t
+\t\t</div>\t
+\t</div> \t\t\t
+\t";
+        }
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -95,7 +107,7 @@ class __TwigTemplate_31104752f148223a0f4fc68ff9ee3f6fbae71d03882a2e63512db573c8e
 
     public function getDebugInfo()
     {
-        return array (  74 => 13,  70 => 11,  68 => 10,  65 => 9,  59 => 7,  57 => 6,  53 => 4,  44 => 3,  15 => 1,);
+        return array (  83 => 24,  81 => 23,  77 => 21,  60 => 7,  56 => 5,  53 => 4,  44 => 3,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -103,19 +115,37 @@ class __TwigTemplate_31104752f148223a0f4fc68ff9ee3f6fbae71d03882a2e63512db573c8e
         return new Twig_Source("{% extends \"base.html.twig\" %}
 
 {% block body %}
+\t{% if username != null %}
 \t<div class=\"row\">
 \t\t<div class=\"col-lg-12\">
-\t\t\t{% if username != null %}
 \t\t\tCiao, {{ username }}! Cosa vuoi fare oggi?
-\t\t\t{% endif %}
-
-\t\t\t{% if username == null %}
-\t\t\t<a href=\"/login\" class=\"btn btn-info\">Accedi</a>\t
-\t\t\t{% endif %}
-\t\t\t
 \t\t</div>\t
 \t</div> 
+\t<div class=\"row\">
+\t\t<div class=\"col-lg-4\">1</div>
+\t\t<div class=\"col-lg-4\">2</div>
+\t\t<div class=\"col-lg-4\">3</div>
+\t</div>
+\t<div class=\"row\">
+\t\t<div class=\"col-lg-4\">4</div>
+\t\t<div class=\"col-lg-4\">5</div>
+\t\t<div class=\"col-lg-4\">6</div>
+\t</div>\t
+\t{% endif %}
+
+
+\t{% if username == null %}
+\t<div class=\"row\">
+\t\t<div class=\"col-lg-12\">\t
+\t\t\t<a href=\"/login\" class=\"btn btn-info\">Accedi</a>\t
+\t\t</div>\t
+\t</div> \t\t\t
+\t{% endif %}
 {% endblock %}
+
+
+
+
 ", "default/index.html.twig", "/home/fabio/greengrey/templates/default/index.html.twig");
     }
 }

@@ -70,7 +70,7 @@ class __TwigTemplate_ae488dd4ff66f753d32ff5e50984613dd01831996fdd4250413119ca728
 
         // line 6
         echo "<div class=\"row\">
-    <div class=\"col-lg-4 offset-lg-4\">
+    <div class=\"col-lg-4 col-lg-offset-4\">
         <form method=\"post\">
             ";
         // line 9
@@ -145,7 +145,7 @@ class __TwigTemplate_ae488dd4ff66f753d32ff5e50984613dd01831996fdd4250413119ca728
 
 {% block body %}
 <div class=\"row\">
-    <div class=\"col-lg-4 offset-lg-4\">
+    <div class=\"col-lg-4 col-lg-offset-4\">
         <form method=\"post\">
             {% if error %}
                 <div class=\"alert alert-danger\">{{ error.messageKey|trans(error.messageData, 'security') }}</div>

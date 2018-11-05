@@ -37,16 +37,38 @@
         {% if username is defined and username != null %}
         <div class="row">
             <div class="col-lg-12">
-                <div id="menu">
-                    <nav class="nav-main">  
-                        <div class="menu-all-pages-container">
-                            <ul id="menu-all-pages" class="menu">
-                                <li class="menu-item current-menu-item"><a href="/home">Home</a></li>
-                                <li class="menu-item"><a href="/trees">Mappa</a>
-                                <li class="menu-item"><a href="/treeslist">Oliveto</a>    
-                                <li class="menu-item"><a href="/calendario">Calendario</a>
-                                <li class="menu-item"><a href="/meteo">Meteo</a>
-                            </ul>
+                <div id="topmenu">   
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand" href="/home">Home</a>
+                            </div>
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="/trees">Geolocalizzazione<span class="sr-only">(current)</span></a></li>
+                                    <li><a href="/treeslist">Lista Olivi</a></li>
+                                    <li><a href="/calendario">Calendario</a></li>
+                                    <li><a href="/meteo">Meteo</a></li>
+                                    <li class="dropdown">
+                                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Altre <span class="caret"></span></a>
+                                      <ul class="dropdown-menu">
+                                        <li><a href="#">link</a></li>
+                                        <li><a href="#">link</a></li>
+                                        <li><a href="#">link</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="#">Sep. link</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="#">altro link</a></li>
+                                      </ul>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </nav>
                 </div>

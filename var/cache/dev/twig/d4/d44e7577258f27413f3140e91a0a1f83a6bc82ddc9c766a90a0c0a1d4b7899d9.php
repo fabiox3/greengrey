@@ -132,8 +132,15 @@ class __TwigTemplate_31104752f148223a0f4fc68ff9ee3f6fbae71d03882a2e63512db573c8e
         if (((isset($context["username"]) || array_key_exists("username", $context) ? $context["username"] : (function () { throw new Twig_Error_Runtime('Variable "username" does not exist.', 60, $this->source); })()) == null)) {
             // line 61
             echo "\t<div class=\"row\">
-\t\t<div class=\"col-lg-12\">\t
-\t\t\t<a href=\"/login\" class=\"btn btn-info\">Accedi</a>\t
+\t\t<div class=\"col-lg-8 col-lg-offset-2 text-center\">\t
+\t\t\t<br><br>
+\t\t\t<div class=\"panel panel-default\">
+\t\t\t  \t<div class=\"panel-body\">
+\t\t\t  \t\tPer visualizzare questa pagina, devi autenticarti<br><br>
+\t\t\t  \t\t<a href=\"/login\" class=\"btn btn-info\">Accedi</a>
+\t\t\t  \t</div>
+\t\t\t</div>\t\t
+\t\t\t\t
 \t\t</div>\t
 \t</div> \t\t\t
 \t";
@@ -224,8 +231,15 @@ class __TwigTemplate_31104752f148223a0f4fc68ff9ee3f6fbae71d03882a2e63512db573c8e
 
 \t{% if username == null %}
 \t<div class=\"row\">
-\t\t<div class=\"col-lg-12\">\t
-\t\t\t<a href=\"/login\" class=\"btn btn-info\">Accedi</a>\t
+\t\t<div class=\"col-lg-8 col-lg-offset-2 text-center\">\t
+\t\t\t<br><br>
+\t\t\t<div class=\"panel panel-default\">
+\t\t\t  \t<div class=\"panel-body\">
+\t\t\t  \t\tPer visualizzare questa pagina, devi autenticarti<br><br>
+\t\t\t  \t\t<a href=\"/login\" class=\"btn btn-info\">Accedi</a>
+\t\t\t  \t</div>
+\t\t\t</div>\t\t
+\t\t\t\t
 \t\t</div>\t
 \t</div> \t\t\t
 \t{% endif %}

@@ -86,16 +86,38 @@ class __TwigTemplate_70a3400c94cbe7ac26bdf6a63e78b17219a050dc697b129c26562f055eb
             // line 38
             echo "        <div class=\"row\">
             <div class=\"col-lg-12\">
-                <div id=\"menu\">
-                    <nav class=\"nav-main\">  
-                        <div class=\"menu-all-pages-container\">
-                            <ul id=\"menu-all-pages\" class=\"menu\">
-                                <li class=\"menu-item current-menu-item\"><a href=\"/home\">Home</a></li>
-                                <li class=\"menu-item\"><a href=\"/trees\">Mappa</a>
-                                <li class=\"menu-item\"><a href=\"/treeslist\">Oliveto</a>    
-                                <li class=\"menu-item\"><a href=\"/calendario\">Calendario</a>
-                                <li class=\"menu-item\"><a href=\"/meteo\">Meteo</a>
-                            </ul>
+                <div id=\"topmenu\">   
+                    <nav class=\"navbar navbar-default\">
+                        <div class=\"container-fluid\">
+                            <div class=\"navbar-header\">
+                                <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">
+                                    <span class=\"sr-only\">Toggle navigation</span>
+                                    <span class=\"icon-bar\"></span>
+                                    <span class=\"icon-bar\"></span>
+                                    <span class=\"icon-bar\"></span>
+                                </button>
+                                <a class=\"navbar-brand\" href=\"/home\">Home</a>
+                            </div>
+                            <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">
+                                <ul class=\"nav navbar-nav\">
+                                    <li><a href=\"/trees\">Geolocalizzazione<span class=\"sr-only\">(current)</span></a></li>
+                                    <li><a href=\"/treeslist\">Lista Olivi</a></li>
+                                    <li><a href=\"/calendario\">Calendario</a></li>
+                                    <li><a href=\"/meteo\">Meteo</a></li>
+                                    <li class=\"dropdown\">
+                                      <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Altre <span class=\"caret\"></span></a>
+                                      <ul class=\"dropdown-menu\">
+                                        <li><a href=\"#\">link</a></li>
+                                        <li><a href=\"#\">link</a></li>
+                                        <li><a href=\"#\">link</a></li>
+                                        <li role=\"separator\" class=\"divider\"></li>
+                                        <li><a href=\"#\">Sep. link</a></li>
+                                        <li role=\"separator\" class=\"divider\"></li>
+                                        <li><a href=\"#\">altro link</a></li>
+                                      </ul>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </nav>
                 </div>
@@ -103,16 +125,16 @@ class __TwigTemplate_70a3400c94cbe7ac26bdf6a63e78b17219a050dc697b129c26562f055eb
         </div> 
         ";
         }
-        // line 55
+        // line 77
         echo "        
     
         ";
-        // line 57
+        // line 79
         $this->displayBlock('body', $context, $blocks);
-        // line 58
+        // line 80
         echo "        ";
         $this->displayBlock('map', $context, $blocks);
-        // line 59
+        // line 81
         echo "        
         <div id=\"siteinfo\" role=\"contentinfo\">
             <address>
@@ -121,7 +143,7 @@ class __TwigTemplate_70a3400c94cbe7ac26bdf6a63e78b17219a050dc697b129c26562f055eb
             </address>  
         </div>        
         ";
-        // line 66
+        // line 88
         $this->displayBlock('javascripts', $context, $blocks);
         echo "        
     </body>
@@ -170,7 +192,7 @@ class __TwigTemplate_70a3400c94cbe7ac26bdf6a63e78b17219a050dc697b129c26562f055eb
 
     }
 
-    // line 57
+    // line 79
     public function block_body($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -187,7 +209,7 @@ class __TwigTemplate_70a3400c94cbe7ac26bdf6a63e78b17219a050dc697b129c26562f055eb
 
     }
 
-    // line 58
+    // line 80
     public function block_map($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -204,7 +226,7 @@ class __TwigTemplate_70a3400c94cbe7ac26bdf6a63e78b17219a050dc697b129c26562f055eb
 
     }
 
-    // line 66
+    // line 88
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -233,7 +255,7 @@ class __TwigTemplate_70a3400c94cbe7ac26bdf6a63e78b17219a050dc697b129c26562f055eb
 
     public function getDebugInfo()
     {
-        return array (  208 => 66,  191 => 58,  174 => 57,  157 => 20,  139 => 6,  125 => 66,  116 => 59,  113 => 58,  111 => 57,  107 => 55,  87 => 38,  85 => 37,  79 => 33,  73 => 31,  71 => 30,  60 => 21,  58 => 20,  41 => 6,  34 => 1,);
+        return array (  230 => 88,  213 => 80,  196 => 79,  179 => 20,  161 => 6,  147 => 88,  138 => 81,  135 => 80,  133 => 79,  129 => 77,  87 => 38,  85 => 37,  79 => 33,  73 => 31,  71 => 30,  60 => 21,  58 => 20,  41 => 6,  34 => 1,);
     }
 
     public function getSourceContext()
@@ -277,16 +299,38 @@ class __TwigTemplate_70a3400c94cbe7ac26bdf6a63e78b17219a050dc697b129c26562f055eb
         {% if username is defined and username != null %}
         <div class=\"row\">
             <div class=\"col-lg-12\">
-                <div id=\"menu\">
-                    <nav class=\"nav-main\">  
-                        <div class=\"menu-all-pages-container\">
-                            <ul id=\"menu-all-pages\" class=\"menu\">
-                                <li class=\"menu-item current-menu-item\"><a href=\"/home\">Home</a></li>
-                                <li class=\"menu-item\"><a href=\"/trees\">Mappa</a>
-                                <li class=\"menu-item\"><a href=\"/treeslist\">Oliveto</a>    
-                                <li class=\"menu-item\"><a href=\"/calendario\">Calendario</a>
-                                <li class=\"menu-item\"><a href=\"/meteo\">Meteo</a>
-                            </ul>
+                <div id=\"topmenu\">   
+                    <nav class=\"navbar navbar-default\">
+                        <div class=\"container-fluid\">
+                            <div class=\"navbar-header\">
+                                <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">
+                                    <span class=\"sr-only\">Toggle navigation</span>
+                                    <span class=\"icon-bar\"></span>
+                                    <span class=\"icon-bar\"></span>
+                                    <span class=\"icon-bar\"></span>
+                                </button>
+                                <a class=\"navbar-brand\" href=\"/home\">Home</a>
+                            </div>
+                            <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">
+                                <ul class=\"nav navbar-nav\">
+                                    <li><a href=\"/trees\">Geolocalizzazione<span class=\"sr-only\">(current)</span></a></li>
+                                    <li><a href=\"/treeslist\">Lista Olivi</a></li>
+                                    <li><a href=\"/calendario\">Calendario</a></li>
+                                    <li><a href=\"/meteo\">Meteo</a></li>
+                                    <li class=\"dropdown\">
+                                      <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Altre <span class=\"caret\"></span></a>
+                                      <ul class=\"dropdown-menu\">
+                                        <li><a href=\"#\">link</a></li>
+                                        <li><a href=\"#\">link</a></li>
+                                        <li><a href=\"#\">link</a></li>
+                                        <li role=\"separator\" class=\"divider\"></li>
+                                        <li><a href=\"#\">Sep. link</a></li>
+                                        <li role=\"separator\" class=\"divider\"></li>
+                                        <li><a href=\"#\">altro link</a></li>
+                                      </ul>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </nav>
                 </div>

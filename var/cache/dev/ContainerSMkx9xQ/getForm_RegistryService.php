@@ -11,7 +11,9 @@ include_once $this->targetDirs[3].'/vendor/symfony/form/FormRegistry.php';
 include_once $this->targetDirs[3].'/vendor/symfony/form/FormExtensionInterface.php';
 include_once $this->targetDirs[3].'/vendor/symfony/form/Extension/DependencyInjection/DependencyInjectionExtension.php';
 
-return $this->privates['form.registry'] = new \Symfony\Component\Form\FormRegistry(array(0 => new \Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension(new \Symfony\Component\DependencyInjection\ServiceLocator(array('App\\Form\\TaskType' => function () {
+return $this->privates['form.registry'] = new \Symfony\Component\Form\FormRegistry(array(0 => new \Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension(new \Symfony\Component\DependencyInjection\ServiceLocator(array('App\\Form\\RaccoltaFormType' => function () {
+    return ($this->privates['App\Form\RaccoltaFormType'] ?? $this->privates['App\Form\RaccoltaFormType'] = new \App\Form\RaccoltaFormType());
+}, 'App\\Form\\TaskType' => function () {
     return ($this->privates['App\Form\TaskType'] ?? $this->privates['App\Form\TaskType'] = new \App\Form\TaskType());
 }, 'App\\Form\\UserType' => function () {
     return ($this->privates['App\Form\UserType'] ?? $this->privates['App\Form\UserType'] = new \App\Form\UserType());

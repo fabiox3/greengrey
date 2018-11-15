@@ -10,11 +10,16 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class RaccoltaController extends AbstractController
 {
+	private $_density;
+
     /**
      * @Route("/raccolta", name="raccolta")
      */
     public function index()
     {
+    	// Densità dell'olio 0.916 g/cm3
+		$this->_density = 0.916; 
+
     	$form = $this->createForm(RaccoltaFormType::class, null);
         if ($form->isSubmitted() && $form->isValid()) {
         	// do stuff	

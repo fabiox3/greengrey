@@ -107,7 +107,7 @@ class __TwigTemplate_70a3400c94cbe7ac26bdf6a63e78b17219a050dc697b129c26562f055eb
                                     <li class=\"dropdown\">
                                       <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Altre <span class=\"caret\"></span></a>
                                       <ul class=\"dropdown-menu\">
-                                        <li><a href=\"#\">link</a></li>
+                                        <li><a href=\"/raccolta\">Raccolta</a></li>
                                         <li><a href=\"#\">link</a></li>
                                         <li><a href=\"#\">link</a></li>
                                         <li role=\"separator\" class=\"divider\"></li>
@@ -320,7 +320,7 @@ class __TwigTemplate_70a3400c94cbe7ac26bdf6a63e78b17219a050dc697b129c26562f055eb
                                     <li class=\"dropdown\">
                                       <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Altre <span class=\"caret\"></span></a>
                                       <ul class=\"dropdown-menu\">
-                                        <li><a href=\"#\">link</a></li>
+                                        <li><a href=\"/raccolta\">Raccolta</a></li>
                                         <li><a href=\"#\">link</a></li>
                                         <li><a href=\"#\">link</a></li>
                                         <li role=\"separator\" class=\"divider\"></li>

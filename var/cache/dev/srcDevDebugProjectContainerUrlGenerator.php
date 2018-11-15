@@ -24,6 +24,7 @@ class srcDevDebugProjectContainerUrlGenerator extends Symfony\Component\Routing\
         'app_home_redirect' => array(array(), array('_controller' => 'App\\Controller\\HomeController::redirectAction'), array(), array(array('text', '/')), array(), array()),
         'app_home_redirect_1' => array(array(), array('_controller' => 'App\\Controller\\HomeController::redirectAction'), array(), array(array('text', '/')), array(), array()),
         'meteo' => array(array(), array('_controller' => 'App\\Controller\\MeteoController::index'), array(), array(array('text', '/meteo')), array(), array()),
+        'raccolta' => array(array(), array('_controller' => 'App\\Controller\\RaccoltaController::index'), array(), array(array('text', '/raccolta')), array(), array()),
         'user_registration' => array(array(), array('_controller' => 'App\\Controller\\RegistrationController::register'), array(), array(array('text', '/register')), array(), array()),
         'app_login' => array(array(), array('_controller' => 'App\\Controller\\SecurityController::login'), array(), array(array('text', '/login')), array(), array()),
         'app_trees_treeslist' => array(array(), array('_controller' => 'App\\Controller\\TreesController::treesList'), array(), array(array('text', '/trees')), array(), array()),

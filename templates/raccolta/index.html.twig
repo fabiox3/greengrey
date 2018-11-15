@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GreenGrey :: Raccolta {% endblock %}
+
+{% block body %}
+
+{{ form_start(form) }}
+    {{ form_row(form.year) }}
+    {{ form_row(form.kg_olive) }}
+    {{ form_row(form.kg_olio) }}
+    {{ form_row(form.resa) }}
+    {{ form_row(form.litri) }}
+    {{ form_row(form.date) }}
+
+    <button type="submit">Salva</button>
+{{ form_end(form) }}
+
+{% endblock %}

@@ -108,23 +108,24 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         $matchedPathinfo = $pathinfo;
         $regexList = array(
             0 => '{^(?'
+                    .'|/raccolta/([^/]++)(*:25)'
                     .'|/trees/(?'
-                        .'|([^/]++)(*:25)'
-                        .'|delete/([^/]++)(*:47)'
+                        .'|([^/]++)(*:50)'
+                        .'|delete/([^/]++)(*:72)'
                     .')'
                     .'|/_(?'
-                        .'|error/(\\d+)(?:\\.([^/]++))?(*:86)'
-                        .'|wdt/([^/]++)(*:105)'
+                        .'|error/(\\d+)(?:\\.([^/]++))?(*:111)'
+                        .'|wdt/([^/]++)(*:131)'
                         .'|profiler/([^/]++)(?'
                             .'|/(?'
-                                .'|search/results(*:151)'
-                                .'|router(*:165)'
+                                .'|search/results(*:177)'
+                                .'|router(*:191)'
                                 .'|exception(?'
-                                    .'|(*:185)'
-                                    .'|\\.css(*:198)'
+                                    .'|(*:211)'
+                                    .'|\\.css(*:224)'
                                 .')'
                             .')'
-                            .'|(*:208)'
+                            .'|(*:234)'
                         .')'
                     .')'
                 .')$}sD',
@@ -135,15 +136,16 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 switch ($m = (int) $matches['MARK']) {
                     default:
                         $routes = array(
-                            25 => array(array('_route' => 'tree_show', '_controller' => 'App\\Controller\\TreesController::showTree'), array('cod'), null, null),
-                            47 => array(array('_route' => 'task_delete', '_controller' => 'App\\Controller\\TreesController::deleteTask'), array('id'), null, null),
-                            86 => array(array('_route' => '_twig_error_test', '_controller' => 'twig.controller.preview_error::previewErrorPageAction', '_format' => 'html'), array('code', '_format'), null, null),
-                            105 => array(array('_route' => '_wdt', '_controller' => 'web_profiler.controller.profiler::toolbarAction'), array('token'), null, null),
-                            151 => array(array('_route' => '_profiler_search_results', '_controller' => 'web_profiler.controller.profiler::searchResultsAction'), array('token'), null, null),
-                            165 => array(array('_route' => '_profiler_router', '_controller' => 'web_profiler.controller.router::panelAction'), array('token'), null, null),
-                            185 => array(array('_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception::showAction'), array('token'), null, null),
-                            198 => array(array('_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception::cssAction'), array('token'), null, null),
-                            208 => array(array('_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'), array('token'), null, null),
+                            25 => array(array('_route' => 'raccoltayear_show', '_controller' => 'App\\Controller\\RaccoltaController::getDataFromYear'), array('year'), null, null),
+                            50 => array(array('_route' => 'tree_show', '_controller' => 'App\\Controller\\TreesController::showTree'), array('cod'), null, null),
+                            72 => array(array('_route' => 'task_delete', '_controller' => 'App\\Controller\\TreesController::deleteTask'), array('id'), null, null),
+                            111 => array(array('_route' => '_twig_error_test', '_controller' => 'twig.controller.preview_error::previewErrorPageAction', '_format' => 'html'), array('code', '_format'), null, null),
+                            131 => array(array('_route' => '_wdt', '_controller' => 'web_profiler.controller.profiler::toolbarAction'), array('token'), null, null),
+                            177 => array(array('_route' => '_profiler_search_results', '_controller' => 'web_profiler.controller.profiler::searchResultsAction'), array('token'), null, null),
+                            191 => array(array('_route' => '_profiler_router', '_controller' => 'web_profiler.controller.router::panelAction'), array('token'), null, null),
+                            211 => array(array('_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception::showAction'), array('token'), null, null),
+                            224 => array(array('_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception::cssAction'), array('token'), null, null),
+                            234 => array(array('_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'), array('token'), null, null),
                         );
 
                         list($ret, $vars, $requiredMethods, $requiredSchemes) = $routes[$m];
@@ -169,7 +171,7 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                         return $ret;
                 }
 
-                if (208 === $m) {
+                if (234 === $m) {
                     break;
                 }
                 $regex = substr_replace($regex, 'F', $m - $offset, 1 + strlen($m));

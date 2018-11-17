@@ -14,37 +14,27 @@ class Raccolta
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
      */
-    private $id;
+    public $id;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private $year;
+    public $year;
 
     /**
      * @ORM\Column(type="float")
      */
-    private $kg_olive;
+    public $kg_olive;
 
     /**
      * @ORM\Column(type="float")
      */
-    private $kg_olio;
-
-    /**
-     * @ORM\Column(type="float")
-     */
-    private $resa;
-
-    /**
-     * @ORM\Column(type="float")
-     */
-    private $litri;
+    public $kg_olio;
 
     /**
      * @ORM\Column(type="date")
      */
-    private $date;
+    public $date;
 
     public function getId(): ?int
     {
@@ -83,30 +73,6 @@ class Raccolta
     public function setKgOlio(float $kg_olio): self
     {
         $this->kg_olio = $kg_olio;
-
-        return $this;
-    }
-
-    public function getResa(): ?float
-    {
-        return $this->resa;
-    }
-
-    public function setResa(float $resa): self
-    {
-        $this->resa = $resa;
-
-        return $this;
-    }
-
-    public function getLitri(): ?float
-    {
-        return $this->litri;
-    }
-
-    public function setLitri(float $litri): self
-    {
-        $this->litri = $litri;
 
         return $this;
     }

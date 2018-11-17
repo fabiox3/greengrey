@@ -4,15 +4,75 @@
 
 {% block body %}
 
-{{ form_start(form) }}
-    {{ form_row(form.year) }}
-    {{ form_row(form.kg_olive) }}
-    {{ form_row(form.kg_olio) }}
-    {{ form_row(form.resa) }}
-    {{ form_row(form.litri) }}
-    {{ form_row(form.date) }}
 
-    <button type="submit">Salva</button>
-{{ form_end(form) }}
+	{% if not form == null %}
+		{{ form_start(form) }}
+		    {{ form_row(form.year) }}
+		    {{ form_row(form.kg_olive) }}
+		    {{ form_row(form.kg_olio) }}
+		    {{ form_row(form.resa) }}
+		    {{ form_row(form.litri) }}
+		    {{ form_row(form.date) }}
+
+		    <button type="submit">Salva</button>
+		{{ form_end(form) }}
+	{% else %}	
+		{% for a in annata %}
+			{{ a.annata }}
+		{% endfor %}
+
+		{% block javascripts %}
+		<script>
+			$(document).ready( function () {
+			    $('#resalist').DataTable({
+			    	retrieve: true,
+			    	pageLength: 30,
+			    	order: [[ 4, "asc" ]],
+			    	language: {
+			    		info: "Mostra _START_ su _END_ di _TOTAL_ totali",
+			    		lengthMenu: "Mostra _MENU_ elementi",
+			    		infoFiltered: "(filtrati su _MAX_ totali)",
+			    		search: "Cerca",
+					    paginate: {
+					        first:      "Prima",
+					        last:       "Ultima",
+					        next:       "Avanti",
+					        previous:   "Indietro"	    		
+						}
+			    	}
+			    });
+			} );
+		</script>
+		{% endblock %}
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<br><br>
+					<table id="resalist" class="table">
+						<thead>
+							<tr>
+								<th scope="col">KG Olive</td>
+								<th scope="col">KG Olio</td>
+								<th scope="col">Resa Qt/Litri</td>
+								<th scope="col">Litri Olio</td>
+								<th scope="col">Data</td>
+							</tr>
+						</thead>
+						<tbody>
+						{% for r in resa %}
+							<tr>
+								<td>{{ r.kg_olive }}</td>
+								<td>{{ r.kg_olio }}</td>
+								<td>{{ (r.kg_olio/r.kg_olive*100)|round(2, 'floor') }}</td>
+								<td>{{ r.kg_olio*0.916|round(2, 'floor') }}</td>
+								<td>{{ r.date|date("d/m/Y") }}</td>
+							</tr>
+						{% endfor %} 		
+						</tbody>
+					</table> 
+				</div>
+			</div>	
+		</div> 
+	{% endif %}
 
 {% endblock %}

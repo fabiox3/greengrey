@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Form\RaccoltaFormType;
 use App\Entity\User;
+use App\Entity\Raccolta;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -29,6 +30,41 @@ class RaccoltaController extends AbstractController
         return $this->render('raccolta/index.html.twig', [
             'username' => (!is_null($this->getUser()))?$this->getUser()->getUsername():null,
             'form' => $form->createView(),
+            'year' => null,
         ]);
+    }
+
+    /**
+    * Matches /trees/*
+    *
+    * @Route("/raccolta/{year}", name="raccoltayear_show")
+    */
+    public function getDataFromYear($year)
+    {
+        if( !is_null($year) ) {
+            $q = $this->getDoctrine()->getRepository(Raccolta::class);
+            $r = $q->findBy(
+                [ 'year' => $year ]
+            );
+
+            return $this->render('raccolta/index.html.twig', [
+                'username' => (!is_null($this->getUser()))?$this->getUser()->getUsername():null,
+                'form' => null,
+                'resa' => $r,
+                'annata' => $this->_getYears(),
+            ]);
+        }
+    }
+
+    private function _getYears()
+    {  
+        $i = 0;
+        for( $y=2015; $y<2100; $y++ ) {
+            if( $y <= date('Y') ) {
+                $years[$i] = ['annata' => $y];
+                $i++;
+            }
+        }
+        return $years;
     }
 }

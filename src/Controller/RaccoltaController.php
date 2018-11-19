@@ -31,6 +31,7 @@ class RaccoltaController extends AbstractController
             'username' => (!is_null($this->getUser()))?$this->getUser()->getUsername():null,
             'form' => $form->createView(),
             'year' => null,
+            'annata' => $this->_getYears(),
         ]);
     }
 
@@ -59,7 +60,7 @@ class RaccoltaController extends AbstractController
     private function _getYears()
     {  
         $i = 0;
-        for( $y=2015; $y<2100; $y++ ) {
+        for( $y=2018; $y<2100; $y++ ) {
             if( $y <= date('Y') ) {
                 $years[$i] = ['annata' => $y];
                 $i++;

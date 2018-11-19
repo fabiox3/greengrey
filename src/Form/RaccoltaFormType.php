@@ -15,8 +15,6 @@ class RaccoltaFormType extends AbstractType
             ->add('year')
             ->add('kg_olive')
             ->add('kg_olio')
-            ->add('resa')
-            ->add('litri')
             ->add('date')
         ;
     }

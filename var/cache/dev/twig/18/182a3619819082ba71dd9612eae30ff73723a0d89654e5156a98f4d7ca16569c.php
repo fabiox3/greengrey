@@ -71,68 +71,68 @@ class __TwigTemplate_1b7b9de25092dba5ba7aefab959c54399d55f8452ecf3ed3c25dd06bf92
 
         // line 6
         echo "
+\t<div class=\"row\">
+\t\t<div class=\"col-lg-12 col-lg-offset-4\">
+\t\t\tSeleziona l'annata di interesse: 
+\t\t\t";
+        // line 10
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["annata"]) || array_key_exists("annata", $context) ? $context["annata"] : (function () { throw new Twig_Error_Runtime('Variable "annata" does not exist.', 10, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["a"]) {
+            // line 11
+            echo "\t\t\t\t<a href=\"/raccolta/";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["a"], "annata", array()), "html", null, true);
+            echo "\">";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["a"], "annata", array()), "html", null, true);
+            echo "</a> | 
+\t\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['a'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 13
+        echo "\t\t</div>
+\t</div>
 
 \t";
-        // line 8
-        if (( !(isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 8, $this->source); })()) == null)) {
-            // line 9
-            echo "\t\t";
-            echo             $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 9, $this->source); })()), 'form_start');
+        // line 16
+        if (( !(isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 16, $this->source); })()) == null)) {
+            // line 17
+            echo "
+\t\t";
+            // line 18
+            echo             $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 18, $this->source); })()), 'form_start');
             echo "
 \t\t    ";
-            // line 10
-            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 10, $this->source); })()), "year", array()), 'row');
+            // line 19
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 19, $this->source); })()), "year", array()), 'row');
             echo "
 \t\t    ";
-            // line 11
-            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 11, $this->source); })()), "kg_olive", array()), 'row');
+            // line 20
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 20, $this->source); })()), "kg_olive", array()), 'row');
             echo "
 \t\t    ";
-            // line 12
-            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 12, $this->source); })()), "kg_olio", array()), 'row');
+            // line 21
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 21, $this->source); })()), "kg_olio", array()), 'row');
             echo "
 \t\t    ";
-            // line 13
-            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 13, $this->source); })()), "resa", array()), 'row');
-            echo "
-\t\t    ";
-            // line 14
-            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 14, $this->source); })()), "litri", array()), 'row');
-            echo "
-\t\t    ";
-            // line 15
-            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 15, $this->source); })()), "date", array()), 'row');
+            // line 22
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 22, $this->source); })()), "date", array()), 'row');
             echo "
 
 \t\t    <button type=\"submit\">Salva</button>
 \t\t";
-            // line 18
-            echo             $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 18, $this->source); })()), 'form_end');
+            // line 25
+            echo             $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 25, $this->source); })()), 'form_end');
             echo "
 \t";
         } else {
-            // line 19
+            // line 26
             echo "\t
 \t\t";
-            // line 20
-            $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable((isset($context["annata"]) || array_key_exists("annata", $context) ? $context["annata"] : (function () { throw new Twig_Error_Runtime('Variable "annata" does not exist.', 20, $this->source); })()));
-            foreach ($context['_seq'] as $context["_key"] => $context["a"]) {
-                // line 21
-                echo "\t\t\t";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["a"], "annata", array()), "html", null, true);
-                echo "
-\t\t";
-            }
-            $_parent = $context['_parent'];
-            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['a'], $context['_parent'], $context['loop']);
-            $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 23
-            echo "
-\t\t";
-            // line 24
+            // line 27
             $this->displayBlock('javascripts', $context, $blocks);
-            // line 47
+            // line 50
             echo "\t\t<div class=\"container\">
 \t\t\t<div class=\"row\">
 \t\t\t\t<div class=\"col-lg-12\">
@@ -149,30 +149,30 @@ class __TwigTemplate_1b7b9de25092dba5ba7aefab959c54399d55f8452ecf3ed3c25dd06bf92
 \t\t\t\t\t\t</thead>
 \t\t\t\t\t\t<tbody>
 \t\t\t\t\t\t";
-            // line 62
+            // line 65
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable((isset($context["resa"]) || array_key_exists("resa", $context) ? $context["resa"] : (function () { throw new Twig_Error_Runtime('Variable "resa" does not exist.', 62, $this->source); })()));
+            $context['_seq'] = twig_ensure_traversable((isset($context["resa"]) || array_key_exists("resa", $context) ? $context["resa"] : (function () { throw new Twig_Error_Runtime('Variable "resa" does not exist.', 65, $this->source); })()));
             foreach ($context['_seq'] as $context["_key"] => $context["r"]) {
-                // line 63
+                // line 66
                 echo "\t\t\t\t\t\t\t<tr>
 \t\t\t\t\t\t\t\t<td>";
-                // line 64
+                // line 67
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "kg_olive", array()), "html", null, true);
                 echo "</td>
 \t\t\t\t\t\t\t\t<td>";
-                // line 65
+                // line 68
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "kg_olio", array()), "html", null, true);
                 echo "</td>
 \t\t\t\t\t\t\t\t<td>";
-                // line 66
+                // line 69
                 echo twig_escape_filter($this->env, twig_round(((twig_get_attribute($this->env, $this->source, $context["r"], "kg_olio", array()) / twig_get_attribute($this->env, $this->source, $context["r"], "kg_olive", array())) * 100), 2, "floor"), "html", null, true);
                 echo "</td>
 \t\t\t\t\t\t\t\t<td>";
-                // line 67
+                // line 70
                 echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, $context["r"], "kg_olio", array()) * twig_round(0.916, 2, "floor")), "html", null, true);
                 echo "</td>
 \t\t\t\t\t\t\t\t<td>";
-                // line 68
+                // line 71
                 echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["r"], "date", array()), "d/m/Y"), "html", null, true);
                 echo "</td>
 \t\t\t\t\t\t\t</tr>
@@ -181,7 +181,7 @@ class __TwigTemplate_1b7b9de25092dba5ba7aefab959c54399d55f8452ecf3ed3c25dd06bf92
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['r'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 70
+            // line 73
             echo " \t\t
 \t\t\t\t\t\t</tbody>
 \t\t\t\t\t</table> 
@@ -190,7 +190,7 @@ class __TwigTemplate_1b7b9de25092dba5ba7aefab959c54399d55f8452ecf3ed3c25dd06bf92
 \t\t</div> 
 \t";
         }
-        // line 77
+        // line 80
         echo "
 ";
         
@@ -201,7 +201,7 @@ class __TwigTemplate_1b7b9de25092dba5ba7aefab959c54399d55f8452ecf3ed3c25dd06bf92
 
     }
 
-    // line 24
+    // line 27
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -210,7 +210,7 @@ class __TwigTemplate_1b7b9de25092dba5ba7aefab959c54399d55f8452ecf3ed3c25dd06bf92
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 25
+        // line 28
         echo "\t\t<script>
 \t\t\t\$(document).ready( function () {
 \t\t\t    \$('#resalist').DataTable({
@@ -253,7 +253,7 @@ class __TwigTemplate_1b7b9de25092dba5ba7aefab959c54399d55f8452ecf3ed3c25dd06bf92
 
     public function getDebugInfo()
     {
-        return array (  214 => 25,  205 => 24,  194 => 77,  185 => 70,  176 => 68,  172 => 67,  168 => 66,  164 => 65,  160 => 64,  157 => 63,  153 => 62,  136 => 47,  134 => 24,  131 => 23,  122 => 21,  118 => 20,  115 => 19,  110 => 18,  104 => 15,  100 => 14,  96 => 13,  92 => 12,  88 => 11,  84 => 10,  79 => 9,  77 => 8,  73 => 6,  64 => 5,  46 => 3,  15 => 1,);
+        return array (  214 => 28,  205 => 27,  194 => 80,  185 => 73,  176 => 71,  172 => 70,  168 => 69,  164 => 68,  160 => 67,  157 => 66,  153 => 65,  136 => 50,  134 => 27,  131 => 26,  126 => 25,  120 => 22,  116 => 21,  112 => 20,  108 => 19,  104 => 18,  101 => 17,  99 => 16,  94 => 13,  83 => 11,  79 => 10,  73 => 6,  64 => 5,  46 => 3,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -264,23 +264,26 @@ class __TwigTemplate_1b7b9de25092dba5ba7aefab959c54399d55f8452ecf3ed3c25dd06bf92
 
 {% block body %}
 
+\t<div class=\"row\">
+\t\t<div class=\"col-lg-12 col-lg-offset-4\">
+\t\t\tSeleziona l'annata di interesse: 
+\t\t\t{% for a in annata %}
+\t\t\t\t<a href=\"/raccolta/{{ a.annata }}\">{{ a.annata }}</a> | 
+\t\t\t{% endfor %}
+\t\t</div>
+\t</div>
 
 \t{% if not form == null %}
+
 \t\t{{ form_start(form) }}
 \t\t    {{ form_row(form.year) }}
 \t\t    {{ form_row(form.kg_olive) }}
 \t\t    {{ form_row(form.kg_olio) }}
-\t\t    {{ form_row(form.resa) }}
-\t\t    {{ form_row(form.litri) }}
 \t\t    {{ form_row(form.date) }}
 
 \t\t    <button type=\"submit\">Salva</button>
 \t\t{{ form_end(form) }}
 \t{% else %}\t
-\t\t{% for a in annata %}
-\t\t\t{{ a.annata }}
-\t\t{% endfor %}
-
 \t\t{% block javascripts %}
 \t\t<script>
 \t\t\t\$(document).ready( function () {

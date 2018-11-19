@@ -1801,6 +1801,30 @@
         "description": "A security checker for your composer.lock"
     },
     {
+        "name": "symfony/apache-pack",
+        "version": "v1.0.1",
+        "version_normalized": "1.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/apache-pack.git",
+            "reference": "3aa5818d73ad2551281fc58a75afd9ca82622e6c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/apache-pack/zipball/3aa5818d73ad2551281fc58a75afd9ca82622e6c",
+            "reference": "3aa5818d73ad2551281fc58a75afd9ca82622e6c",
+            "shasum": ""
+        },
+        "time": "2017-12-12T01:46:35+00:00",
+        "type": "symfony-pack",
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "A pack for Apache support in Symfony"
+    },
+    {
         "name": "symfony/cache",
         "version": "v4.1.6",
         "version_normalized": "4.1.6.0",
@@ -2221,17 +2245,17 @@
     },
     {
         "name": "symfony/dotenv",
-        "version": "v4.1.6",
-        "version_normalized": "4.1.6.0",
+        "version": "v4.1.7",
+        "version_normalized": "4.1.7.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/dotenv.git",
-            "reference": "22ca63c46e252b8a8f37b8f9e6da66bff5b3d3e7"
+            "reference": "9f3074b55bc56627f61fb2c17d573ee7df8e1319"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/dotenv/zipball/22ca63c46e252b8a8f37b8f9e6da66bff5b3d3e7",
-            "reference": "22ca63c46e252b8a8f37b8f9e6da66bff5b3d3e7",
+            "url": "https://api.github.com/repos/symfony/dotenv/zipball/9f3074b55bc56627f61fb2c17d573ee7df8e1319",
+            "reference": "9f3074b55bc56627f61fb2c17d573ee7df8e1319",
             "shasum": ""
         },
         "require": {
@@ -2240,7 +2264,7 @@
         "require-dev": {
             "symfony/process": "~3.4|~4.0"
         },
-        "time": "2018-07-26T11:24:31+00:00",
+        "time": "2018-10-12T12:56:03+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {

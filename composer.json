@@ -6,7 +6,9 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "sensio/framework-extra-bundle": "^5.2",
+        "symfony/apache-pack": "^1.0",
         "symfony/console": "*",
+        "symfony/dotenv": "*",
         "symfony/flex": "^1.1",
         "symfony/form": "*",
         "symfony/framework-bundle": "*",
@@ -18,7 +20,6 @@
     },
     "require-dev": {
         "sensiolabs/security-checker": "^5.0",
-        "symfony/dotenv": "*",
         "symfony/maker-bundle": "^1.8",
         "symfony/profiler-pack": "^1.0",
         "symfony/web-server-bundle": "*"

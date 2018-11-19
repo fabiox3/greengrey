@@ -71,6 +71,8 @@ class srcProdProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBundle\R
             default:
                 $routes = array(
                     '/home' => array(array('_route' => 'app_homepage', '_controller' => 'App\\Controller\\HomeController::indexAction'), null, null, null),
+                    '/meteo' => array(array('_route' => 'meteo', '_controller' => 'App\\Controller\\MeteoController::index'), null, null, null),
+                    '/raccolta' => array(array('_route' => 'raccolta', '_controller' => 'App\\Controller\\RaccoltaController::index'), null, null, null),
                     '/register' => array(array('_route' => 'user_registration', '_controller' => 'App\\Controller\\RegistrationController::register'), null, null, null),
                     '/login' => array(array('_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'), null, null, null),
                     '/trees' => array(array('_route' => 'app_trees_treeslist', '_controller' => 'App\\Controller\\TreesController::treesList'), null, null, null),
@@ -101,9 +103,10 @@ class srcProdProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBundle\R
         $matchedPathinfo = $pathinfo;
         $regexList = array(
             0 => '{^(?'
+                    .'|/raccolta/([^/]++)(*:25)'
                     .'|/trees/(?'
-                        .'|([^/]++)(*:25)'
-                        .'|delete/([^/]++)(*:47)'
+                        .'|([^/]++)(*:50)'
+                        .'|delete/([^/]++)(*:72)'
                     .')'
                 .')$}sD',
         );
@@ -113,8 +116,9 @@ class srcProdProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBundle\R
                 switch ($m = (int) $matches['MARK']) {
                     default:
                         $routes = array(
-                            25 => array(array('_route' => 'tree_show', '_controller' => 'App\\Controller\\TreesController::showTree'), array('cod'), null, null),
-                            47 => array(array('_route' => 'task_delete', '_controller' => 'App\\Controller\\TreesController::deleteTask'), array('id'), null, null),
+                            25 => array(array('_route' => 'raccoltayear_show', '_controller' => 'App\\Controller\\RaccoltaController::getDataFromYear'), array('year'), null, null),
+                            50 => array(array('_route' => 'tree_show', '_controller' => 'App\\Controller\\TreesController::showTree'), array('cod'), null, null),
+                            72 => array(array('_route' => 'task_delete', '_controller' => 'App\\Controller\\TreesController::deleteTask'), array('id'), null, null),
                         );
 
                         list($ret, $vars, $requiredMethods, $requiredSchemes) = $routes[$m];
@@ -140,7 +144,7 @@ class srcProdProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBundle\R
                         return $ret;
                 }
 
-                if (47 === $m) {
+                if (72 === $m) {
                     break;
                 }
                 $regex = substr_replace($regex, 'F', $m - $offset, 1 + strlen($m));

@@ -4,23 +4,26 @@
 
 {% block body %}
 
+	<div class="row">
+		<div class="col-lg-12 col-lg-offset-4">
+			Seleziona l'annata di interesse: 
+			{% for a in annata %}
+				<a href="/raccolta/{{ a.annata }}">{{ a.annata }}</a> | 
+			{% endfor %}
+		</div>
+	</div>
 
 	{% if not form == null %}
+
 		{{ form_start(form) }}
 		    {{ form_row(form.year) }}
 		    {{ form_row(form.kg_olive) }}
 		    {{ form_row(form.kg_olio) }}
-		    {{ form_row(form.resa) }}
-		    {{ form_row(form.litri) }}
 		    {{ form_row(form.date) }}
 
 		    <button type="submit">Salva</button>
 		{{ form_end(form) }}
 	{% else %}	
-		{% for a in annata %}
-			{{ a.annata }}
-		{% endfor %}
-
 		{% block javascripts %}
 		<script>
 			$(document).ready( function () {
